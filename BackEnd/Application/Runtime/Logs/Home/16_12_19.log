@@ -1,0 +1,53 @@
+[ 2016-12-19T23:08:00+08:00 ] ::1 /NewWorld/FEBE/BackEnd/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.024164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+
+[ 2016-12-19T23:08:46+08:00 ] ::1 /NewWorld/FEBE/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+
+[ 2016-12-19T23:08:49+08:00 ] ::1 /NewWorld/FEBE/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001142s ]
+NOTIC: [8] Undefined variable: GET F:\xampp\htdocs\NewWorld\FEBE\BackEnd\Application\Home\Controller\MusicController.class.php ç¬¬ 22 è¡Œ.
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+
+[ 2016-12-19T23:08:51+08:00 ] ::1 /NewWorld/FEBE/BackEnd/index.php/Home/Music/getList?data=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001790s ]
+NOTIC: [8] Undefined variable: GET F:\xampp\htdocs\NewWorld\FEBE\BackEnd\Application\Home\Controller\MusicController.class.php ç¬¬ 22 è¡Œ.
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+
+[ 2016-12-19T23:08:53+08:00 ] ::1 /NewWorld/FEBE/BackEnd/index.php/Home/Music/getList?data=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+NOTIC: [8] Undefined variable: GET F:\xampp\htdocs\NewWorld\FEBE\BackEnd\Application\Home\Controller\MusicController.class.php ç¬¬ 22 è¡Œ.
+ERR: SQLSTATE[HY000] [2002] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+

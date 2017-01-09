@@ -98,7 +98,7 @@ define(function(require, exports, module) {
 				$.each(json, function(index, value) {
 					html += '<dd data-id="' + value.music_id + '">' +
 						'<span>' + (index + 1) + '</span>' +
-						'<a href="javascript:;">' + value.name + '</a>' +
+						'<a href="#/result?id='+value.music_id+'">' + value.name + '</a>' +
 						'<div class="dd-oper">' +
 						'<a href="javascript:;" class="icon-play"></a>' +
 						'<a href="javascript:;" class="icon-add"></a>' +
@@ -182,7 +182,8 @@ define(function(require, exports, module) {
 						type: t
 					},
 					'success': function(res) {
-						alert(res);
+						console.log(res);
+						// alert(res);
 					}
 				});
 			} else {
@@ -211,7 +212,7 @@ define(function(require, exports, module) {
 			MList.update();
 
 		}).on('click', this.rankLIStore, function() {
-			if (!cookie('unique')) {
+			if (!cookie('unique') || cookie('unique') == '') {
 				alert('您尚未登录');
 
 			} else {
@@ -219,8 +220,8 @@ define(function(require, exports, module) {
 				$.get(URLPrefix + '/User/colSingleMusic', {
 					uid: cookie('unique'),
 					mid: trgid
-				}, function(result) {
-					alert(result);
+				}, function(res) {
+					alert(res.msg);
 				});
 			}
 		});

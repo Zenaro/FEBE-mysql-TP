@@ -10,7 +10,7 @@
 	height: 180px;
 	float: left;
 	margin-right: 40px;
-	background: url('../../image/poster/profile.jpg') no-repeat;
+	background: url('../image/poster/profile.jpg') no-repeat;
 }
 .wrap-in .main-title .title-info {
 	width: 800px;
@@ -72,7 +72,7 @@
 	width: 17px;
 	height: 17px;
 	margin: 9px;
-	background: url('../image/table.png');
+	background: url('../image/sprite/table.png');
 	background-position: 0 -103px;
 }
 .wrap-in .main-mlist ul li a.icon-play:hover {
@@ -149,5 +149,8 @@
 	border: solid 1px #ccc;
 }
 .wrap-in .main-mfriend ul li {
-	padding: 5px;
+	padding: 7px 15px;
+}
+.wrap-in .main-mfriend ul li:hover{
+	background: #eee;
 }

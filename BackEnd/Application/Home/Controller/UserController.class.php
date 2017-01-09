@@ -14,9 +14,6 @@ class UserController extends Controller {
 			$pwd = $_POST['pwd'];
 			$result = $data->checkLogin($email, $pwd);
 			$this->ajaxReturn($result, 'JSON');
-			// // $data.checklogin($map['email'], $map['pwd']);
-			// $result = $data->where($map)->select();
-			// var_dump($result);
 
 		} else {
 			$result = ['status'=>-1, 'msg'=>'参数缺失'];
@@ -24,7 +21,7 @@ class UserController extends Controller {
 		}
 	}
 
-	// 注册操作
+	// 注册操作，验证重复，插入新字段
 	public function reg() {
 		if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['pwd'])) {
 			$name = $_POST['name'];
@@ -46,7 +43,7 @@ class UserController extends Controller {
 		}
 	}
 
-	// 获取好友列表
+	// 获取用户的好友列表
 	public function getFriends() {
 		if (isset($_GET['uid'])) {
 			$uid = $_GET['uid'];
@@ -67,19 +64,37 @@ class UserController extends Controller {
 		}
 	}
 
-	// 评论
+	// 添加评论
 	public function setComment() {
-
+		if (isset($_GET['uid']) && isset($_GET['mid']) && isset($_GET['comment'])) {
+			$uid = $_GET['uid'];
+			$mid = $_GET['mid'];
+			$comment = $_GET['comment'];
+			$data = new UserModel();
+			$result = $data->setComment($uid, $mid, $comment);
+			$this->ajaxReturn($result, 'JSON');
+		}
 	}
 
 	// 获取用户的歌曲收藏列表
-	public function gettMusicList() {
-
+	public function getMusicList() {
+		if (isset($_GET['uid'])) {
+			$uid = $_GET['uid'];
+			$data = new UserModel();
+			$result = $data->getMusicList($uid);
+			$this->ajaxReturn($result, 'JSON');
+		}
 	}
 
-	// 删除歌曲
-	public function delSingleeMusic() {
-		
+	// 删除某首歌曲
+	public function delSingleMusic() {
+		if (isset($_GET['uid']) && isset($_GET['mid'])) {
+			$uid = $_GET['uid'];
+			$mid = $_GET['mid'];
+			$data = new UserModel();
+			$result = $data->delSingleMusic($uid, $mid);
+			$this->ajaxReturn($result, 'JSON');
+		}
 	}
 
 	// 收藏某首歌曲

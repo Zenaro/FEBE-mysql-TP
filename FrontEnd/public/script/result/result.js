@@ -46,7 +46,6 @@ define(function(require, exports, module) {
                     }
                     $('.content').append(html);
                 });
-
                 $.get(URLPrefix + '/Music/getComment', {
                     mid: data_id
                 }, function(res) { // get 评论
@@ -91,17 +90,21 @@ define(function(require, exports, module) {
 
                 $(this).text('');
 
-            }).on('click', 'input[type=submit]', function() {
-
+            }).on('click', '.comment input[type=submit]', function() {
+                if (!cookie('unique') || cookie('unique') == '') {
+                    alert('您尚未登录');
+                    return;
+                }
                 var html = '',
                     user_id = cookie('unique'),
                     txt = $.trim($('textarea').val());
                 $.get(URLPrefix + '/User/setComment', {
                     uid: user_id,
                     mid: self._mid,
-                    com: txt
+                    comment: txt
                 }, function(res) {
-                    if (res === 'ok') {
+                    console.log(res);
+                    if (res.result === 1) {
                         html += '<div class="cell" data-id="' + user_id + '">' +
                             '<p>' +
                             '<span class="user-name">' + $('.user-memb h4').text() + '：</span>' +
@@ -110,6 +113,7 @@ define(function(require, exports, module) {
                             '<i class="btn-add"> + 加为好友</i>' +
                             '</div>';
                     }
+                    $('.comment p').empty();
                     $('.comment .cell').eq(0).after(html);
                     $('textarea').val('');
                 });

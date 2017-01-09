@@ -127,7 +127,6 @@ class MusicModel extends Model {
 		} else {
 			return ['msg'=>'empty', 'result'=>-1];
 		}
-		
 	}
 }
 ?>

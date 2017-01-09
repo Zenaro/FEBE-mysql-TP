@@ -31,12 +31,11 @@ define(function(require, exports, module) {
 			}, function(res) {
 				$(self.user).html(res);
 			});
-			$.post(URLPrefix + '/User/getMusic', {
+			$.get(URLPrefix + '/User/getMusicList', {
 				uid: cookie('unique')
 			}, function(res) {
-				var json = $.parseJSON(res);
 				var html = '';
-				$.each(json, function(index, value) {
+				$.each(res.result, function(index, value) {
 					html += '<li data-id="' + value.music_id + '">' +
 						'<a href="javascript:;" class="icon-play"></a>' +
 						'<div class="col col-1">' +
@@ -55,12 +54,12 @@ define(function(require, exports, module) {
 				$(self.mul).append(html);
 			});
 
-			$.get('../../phpCtrl/myFriend.php', {
+			$.get(URLPrefix + '/User/getFriends', {
 				uid: cookie('unique')
 			}, function(res) {
-				var json = $.parseJSON(res);
+				console.log(res);
 				var html = '';
-				$.each(json, function(index, value) {
+				$.each(res.result, function(index, value) {
 					html += '<li data-id="' + value.friend_id + '">' +
 						value.name +
 						'</li>';
@@ -93,11 +92,11 @@ define(function(require, exports, module) {
 		}, this.mlist).on('click', this.listBtnPlay, function() {
 
 			var mid = $(this).parents('li').attr('data-id');
-			$.get('../../phpCtrl/getMInfo.php?id=' + mid, function(res) {
-				var json = $.parseJSON(res)[0];
-				$('audio')[0].src = json.src;
-				$('audio')[0].play();
-			});
+			var Music = require('../common/music');
+			var MList = require('../common/mlist');
+			Music.appendEle(mid);
+			Music.init(mid);
+			MList.update();
 
 		}).on('click', this.listBtnAdd, function() {
 
@@ -106,12 +105,10 @@ define(function(require, exports, module) {
 
 		}).on('click', this.listBtnDel, function() {
 
-			// alert(cookie('unique'))
-			// alert(cookie('unique'))
 			if (!!cookie('unique')) {
 				var obj = $(this).parents('li');
 				var delID = $(obj).attr('data-id');
-				$.get('../../phpCtrl/delMusic.php', {
+				$.get(URLPrefix + '/User/delSingleMusic', {
 					'uid': cookie('unique'),
 					'mid': delID
 				});

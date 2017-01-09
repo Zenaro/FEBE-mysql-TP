@@ -7,12 +7,21 @@ class UserModel extends Model {
 	protected $FriendsInfo;
 	public function __construct() {
 		$musicClass = new Model();
+		$userMusic = new Model();
 		$friendsInfo = new Model();
 
 		$this->MusicClass = $musicClass->table(array(
 			C('DB_PREFIX').'music'=>'music',
 			C('DB_PREFIX').'musicrclass'=>'mrc',
 			C('DB_PREFIX').'class'=>'class'
+		));
+
+		$this->UserMusic = $userMusic->table(array(
+			C('DB_PREFIX').'music'=>'music',
+			C('DB_PREFIX').'singerrmusic'=>'srm',
+			C('DB_PREFIX').'singer'=>'singer',
+			C('DB_PREFIX').'collection'=>'col',
+			C('DB_PREFIX').'user'=>'user'
 		));
 
 		$this->FriendsInfo = $friendsInfo->table(array(
@@ -91,7 +100,7 @@ class UserModel extends Model {
 	public function getFriends($uid) {
 		$map['user_id'] = $uid;
 		$result = $this->FriendsInfo
-			->where("friends.user_id=".$uid." and friends.friends_id=info.user_id")
+			->where("friends.user_id=".$uid." and friends.friend_id=info.user_id")
 			->select();
 		return ['msg'=>'succ', 'result'=>$result];
 	}
@@ -104,9 +113,9 @@ class UserModel extends Model {
 	public function setFriends($uid, $fid) {
 		$data = M('Friends');
 		$map['user_id'] = $uid;
-		$map['friends_id'] = $fid;
+		$map['friend_id'] = $fid;
 		$query = $data->where($map)->select();
-		if (count($query) > 0) {
+		if (!!$query) {
 			return ['msg'=>'对方已是您的好友', 'result'=>-1];
 
 		} else {
@@ -120,11 +129,14 @@ class UserModel extends Model {
 	* @param
 	* $uid:用户id;	
 	*/
-	public function setComment($uid) {
-		// $data = M('Info');
-		// $map['user_id'] = $uid;
-		// $result = $data->where($map)->select();
-		// return ['msg'=>'succ', 'result'=>$result];
+	public function setComment($uid, $mid, $comment) {
+		$data = M('Comment');
+		$map['user_id'] = $uid;
+		$map['music_id'] = $mid;
+		$map['content'] = $comment;
+		$map['time'] = date("Y-m-d h-i-s", time());
+		$result = $data->add($map);
+		return ['msg'=>'添加评论成功', 'result'=>$result];
 	}
 
 	/*
@@ -133,10 +145,28 @@ class UserModel extends Model {
 	* $uid:用户id
 	*/
 	public function getMusicList($uid) {
-		// $data = M('Info');
-		// $map['user_id'] = $uid;
-		// $result = $data->where($map)->select();
-		// return ['msg'=>'succ', 'result'=>$result];
+		$data = M('collection');
+		$result = $this->UserMusic
+			->where("user.id=".$uid." and music.music_id=srm.music_id and singer.singer_id=srm.singer_id and col.music_id=music.music_id and col.user_id=user.id")
+			->select();
+		return ['msg'=>'succ', 'result'=>$result];
+	}
+
+	/*
+	* 用户删除某首歌曲
+	* @param
+	* $uid:用户id;	$mid:歌曲id
+	*/
+	public function delSingleMusic($uid, $mid) {
+		$map['uid'] = $uid;
+		$map['mid'] = $mid;
+		$data = M('Collection');
+		$result = $data->where($map)->delete();
+		if ($result > 0) {
+			return ['msg'=>'删除成功', 'result'=>$result];
+		} else {
+			return ['msg'=>'删除失败，请重试', 'result'=>$result];
+		}
 	}
 
 	/*
@@ -149,7 +179,7 @@ class UserModel extends Model {
 		$map['music_id'] = $mid;
 		$data = M('Collection');
 		$result = $data->where($map)->select();
-		if ($result > 0) {
+		if (!!$result) {
 			return ['msg'=>'已收藏过该歌曲', 'result'=>-1];
 
 		} else {
@@ -189,23 +219,6 @@ class UserModel extends Model {
 		// var_dump($arr);
 		
 		// return $query;
-	}
-
-	/*
-	* 用户删除某首歌曲
-	* @param
-	* $uid:用户id;	$mid:歌曲id
-	*/
-	public function delSingleMusic($uid, $mid) {
-		$map['uid'] = $uid;
-		$map['mid'] = $mid;
-		$data = M('Collection');
-		$result = $data->where($map)->delete();
-		if ($result > 0) {
-			return ['msg'=>'删除成功', 'result'=>$result];
-		} else {
-			return ['msg'=>'删除失败，请重试', 'result'=>$result];
-		}
 	}
 }
 ?>

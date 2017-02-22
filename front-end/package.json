@@ -1,0 +1,13 @@
+{
+	"name": "FrontEnd",
+	"version": "1.0.0",
+	"main": "./script/entry.js",
+	"license": "MIT",
+	"author": "Zenaro",
+	"dependencies": {
+		"css-loader": "^0.26.1",
+		"style-loader": "^0.13.1",
+		"url-loader": "^0.5.7",
+		"webpack": "^2.2.1"
+	}
+}

@@ -1,0 +1,7 @@
+/FrontEnd/node_modules
+
+/FrontEnd/build
+
+/FrontEnd/npm-debug.log
+/FrontEnd/yarn-debug.log
+/FrontEnd/yarn-error.log

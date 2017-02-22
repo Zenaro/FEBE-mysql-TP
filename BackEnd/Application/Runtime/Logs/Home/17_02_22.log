@@ -1,0 +1,32 @@
+[ 2017-02-22T14:56:26+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.156532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.074984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.075074s ]
+SQL: SHOW COLUMNS FROM `app_news` [ RunTime:0.5740s ]
+SQL: SELECT * FROM `app_news` LIMIT 7   [ RunTime:0.0524s ]
+
+[ 2017-02-22T14:56:26+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql/BackEnd/index.php/Home/Music/getList?data=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.156538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.074681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.074769s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.5745s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.3991s ]
+
+[ 2017-02-22T14:56:26+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.156505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.074679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.074771s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.5749s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.3989s ]
+

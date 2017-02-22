@@ -1,7 +1,6 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-// use Think\Model;
 use Home\Model\UserModel;
 
 class UserController extends Controller {

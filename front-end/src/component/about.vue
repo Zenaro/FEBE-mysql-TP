@@ -1,17 +1,20 @@
 <template>
-  <div id="app">
-    <fs-navbar/>
-    <main>
-      <router-view/>
-    </main>
+  <div>
+    test
   </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
-
 <script>
-import About from './About.vue';
-export default Vue.component()
+
+export default {
+	data() {
+		return {
+		message: 'hello!'
+		}
+	},
+	created() {
+		this.message = 'bye!'
+	}
+}
+
 </script>

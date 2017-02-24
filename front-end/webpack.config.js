@@ -14,10 +14,16 @@ module.exports = {
       loader: 'style!css!autoprefixer'
     }, {
       test: /\.vue$/,
-      loader: 'vue'
+      loader: 'vue-loader'
     }, {
       test: /\.scss$/,
-      loader: 'style!css!sass?sourceMap'
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader'
+      }, {
+        loader: 'sass-loader'
+      }]
     }, {
       test: /\.(png|jpg|gif)$/,
       loader: 'url-loader?limit=8192'

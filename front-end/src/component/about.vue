@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<style type="text/css">
+	div {
+		/*color: red;*/
+	}
+</style>
+
 <script>
 
 export default {

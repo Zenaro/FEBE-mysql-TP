@@ -11044,6 +11044,10 @@ return Vue$3;
 //
 //
 //
+//
+//
+//
+//
 
 
 module.exports = {
@@ -11645,7 +11649,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": "/login"
     }
-  }, [_vm._v("热门歌曲")])], 1), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _vm._m(2)])])
+  }, [_vm._v("热门歌曲")])], 1), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c('router-view'), _vm._v(" "), _c('div', {
+    staticClass: "footer"
+  })], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('li', [_c('a', {
     attrs: {
@@ -11779,12 +11785,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_base_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__component_container_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_login_vue__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_login_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__component_login_vue__);
 
 
 
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router___default.a);
+
 
 
 // import About from './component/about.vue';
@@ -11816,7 +11825,11 @@ __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a.use(__WEBPACK_IMPORTED_M
 const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router___default.a({
 	routes: [{
 		path: '/',
-		component: __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default.a
+		component: __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default.a,
+		children: [{
+			path: 'login',
+			component: __WEBPACK_IMPORTED_MODULE_4__component_login_vue___default.a
+		}]
 	}]
 });
 
@@ -11836,7 +11849,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/* ---- header ------- */\n.header {\n  width: 100%;\n  height: 105px;\n  min-width: 1000px;\n  background: #F2FAF7;\n}\n.header .center {\n    width: 1000px;\n    margin: 0 auto;\n}\n.header div.header-banner {\n    height: 70px;\n}\n.header div.header-banner > h1 {\n      width: 180px;\n      height: 70px;\n      overflow: hidden;\n      font-weight: bolder;\n      font-size: 24px;\n      color: #0F6C3E;\n      float: left;\n      line-height: 70px;\n}\n.header div.header-banner ul {\n      float: left;\n      text-align: center;\n      font-size: 16px;\n}\n.header div.header-banner ul li {\n        padding: 0 1px;\n        float: left;\n}\n.header div.header-banner > ul.nav li {\n      line-height: 70px;\n}\n.header div.header-banner > ul.nav li a {\n        padding: 0 14px;\n        display: block;\n}\n.header div.header-banner > ul.nav li a:hover, .header div.header-banner > ul.nav li a.active {\n          background: #DBFAF0;\n}\n.header div.header-banner > .top-tool {\n      height: 70px;\n      float: right;\n      padding: 0 35px;\n}\n.header div.header-banner > .top-tool .top-search {\n        width: 235px;\n        height: 30px;\n        float: left;\n        background: #fcfcfc;\n        margin: 20px;\n        border: solid 1px #ccc;\n        border-radius: 20px;\n        position: relative;\n}\n.header div.header-banner > .top-tool .top-search input {\n          width: 185px;\n          height: 30px;\n          border: 0;\n          float: left;\n          background: #fcfcfc;\n          line-height: 30px;\n          outline: none;\n          margin-left: 15px;\n}\n.header div.header-banner > .top-tool .top-search i {\n          width: 30px;\n          height: 20px;\n          display: block;\n          float: right;\n          cursor: pointer;\n          margin: 5px 5px 0 0;\n          background: url(\"http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/sprite.png\");\n          background-position: -440px -10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result {\n          width: 250px;\n          background: #fff;\n          position: absolute;\n          padding: 5px 0;\n          border: solid 1px #ccc;\n          border-radius: 7px;\n          display: none;\n          top: 35px;\n          left: 0;\n}\n.header div.header-banner > .top-tool .top-search ul.result li {\n            width: 99%;\n            height: 30px;\n            line-height: 30px;\n            text-indent: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a {\n              overflow: hidden;\n              display: block;\n              font-size: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a.active, .header div.header-banner > .top-tool .top-search ul.result li a:hover {\n                background: #f1f1f1;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col {\n                float: left;\n                white-space: nowrap;\n                overflow: hidden;\n                text-overflow: ellipsis;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-master {\n                  max-width: 30%;\n                  color: #0C73C2;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.col-str {\n                  max-width: 10%;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-name {\n                  max-width: 60%;\n}\n.header div.header-banner > .top-tool .top-user {\n        float: left;\n        color: #666;\n        cursor: pointer;\n        background: inherit;\n        line-height: 70px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb {\n          height: auto;\n          line-height: 70px;\n          display: none;\n          float: left;\n          position: relative;\n}\n.header div.header-banner > .top-tool .top-user .user-memb h4 {\n            font-weight: normal;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down {\n            width: 90px;\n            padding: 5px 0;\n            text-align: center;\n            background: #fafafa;\n            border: solid 1px #aaa;\n            border-radius: 4px;\n            position: absolute;\n            top: 50px;\n            left: -30px;\n            display: none;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li {\n              width: 88px;\n              height: 25px;\n              line-height: 25px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a {\n                display: block;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a:hover {\n                  background: #F2FAF7;\n}\n.header div.sub-list {\n    width: 100%;\n    height: 35px;\n    overflow: hidden;\n    background: #777;\n}\n.header div.sub-list ul.sub-nav {\n      margin-left: 190px;\n}\n.header div.sub-list ul.sub-nav li {\n        padding: 0 15px;\n        color: #03DEDB;\n        line-height: 35px;\n        float: left;\n}\n.header div.sub-list ul.sub-nav li a {\n          padding: 0 12px;\n          border-radius: 10px;\n          font-size: 12px;\n}\n.header div.sub-list ul.sub-nav li a:hover, .header div.sub-list ul.sub-nav li a:focus, .header div.sub-list ul.sub-nav li a.active {\n            color: #F5CE03;\n            background: #666;\n}\n\n/* --------- end ------------ */\n/* ------- 主页内容 --------- */\n.wrap {\n  width: 100%;\n  min-width: 1100px;\n  margin: 0 auto;\n  background: #fafafa;\n}\n.wrap .wrap-in {\n    width: 1100px;\n    margin: 0 auto;\n    background: #FAFAF5;\n}\n", ""]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n/* ---- header ------- */\n.header {\n  width: 100%;\n  height: 105px;\n  min-width: 1000px;\n  background: #F2FAF7;\n}\n.header .center {\n    width: 1000px;\n    margin: 0 auto;\n}\n.header div.header-banner {\n    height: 70px;\n}\n.header div.header-banner > h1 {\n      width: 180px;\n      height: 70px;\n      overflow: hidden;\n      font-weight: bolder;\n      font-size: 24px;\n      color: #0F6C3E;\n      float: left;\n      line-height: 70px;\n}\n.header div.header-banner ul {\n      float: left;\n      text-align: center;\n      font-size: 16px;\n}\n.header div.header-banner ul li {\n        padding: 0 1px;\n        float: left;\n}\n.header div.header-banner > ul.nav li {\n      line-height: 70px;\n}\n.header div.header-banner > ul.nav li a {\n        padding: 0 14px;\n        display: block;\n}\n.header div.header-banner > ul.nav li a:hover, .header div.header-banner > ul.nav li a.active {\n          background: #DBFAF0;\n}\n.header div.header-banner > .top-tool {\n      height: 70px;\n      float: right;\n      padding: 0 35px;\n}\n.header div.header-banner > .top-tool .top-search {\n        width: 235px;\n        height: 30px;\n        float: left;\n        background: #fcfcfc;\n        margin: 20px;\n        border: solid 1px #ccc;\n        border-radius: 20px;\n        position: relative;\n}\n.header div.header-banner > .top-tool .top-search input {\n          width: 185px;\n          height: 30px;\n          border: 0;\n          float: left;\n          background: #fcfcfc;\n          line-height: 30px;\n          outline: none;\n          margin-left: 15px;\n}\n.header div.header-banner > .top-tool .top-search i {\n          width: 30px;\n          height: 20px;\n          display: block;\n          float: right;\n          cursor: pointer;\n          margin: 5px 5px 0 0;\n          background: url(\"http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/sprite.png\");\n          background-position: -440px -10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result {\n          width: 250px;\n          background: #fff;\n          position: absolute;\n          padding: 5px 0;\n          border: solid 1px #ccc;\n          border-radius: 7px;\n          display: none;\n          top: 35px;\n          left: 0;\n}\n.header div.header-banner > .top-tool .top-search ul.result li {\n            width: 99%;\n            height: 30px;\n            line-height: 30px;\n            text-indent: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a {\n              overflow: hidden;\n              display: block;\n              font-size: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a.active, .header div.header-banner > .top-tool .top-search ul.result li a:hover {\n                background: #f1f1f1;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col {\n                float: left;\n                white-space: nowrap;\n                overflow: hidden;\n                text-overflow: ellipsis;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-master {\n                  max-width: 30%;\n                  color: #0C73C2;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.col-str {\n                  max-width: 10%;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-name {\n                  max-width: 60%;\n}\n.header div.header-banner > .top-tool .top-user {\n        float: left;\n        color: #666;\n        cursor: pointer;\n        background: inherit;\n        line-height: 70px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb {\n          height: auto;\n          line-height: 70px;\n          display: none;\n          float: left;\n          position: relative;\n}\n.header div.header-banner > .top-tool .top-user .user-memb h4 {\n            font-weight: normal;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down {\n            width: 90px;\n            padding: 5px 0;\n            text-align: center;\n            background: #fafafa;\n            border: solid 1px #aaa;\n            border-radius: 4px;\n            position: absolute;\n            top: 50px;\n            left: -30px;\n            display: none;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li {\n              width: 88px;\n              height: 25px;\n              line-height: 25px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a {\n                display: block;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a:hover {\n                  background: #F2FAF7;\n}\n.header div.sub-list {\n    width: 100%;\n    height: 35px;\n    overflow: hidden;\n    background: #777;\n}\n.header div.sub-list ul.sub-nav {\n      margin-left: 190px;\n}\n.header div.sub-list ul.sub-nav li {\n        padding: 0 15px;\n        color: #03DEDB;\n        line-height: 35px;\n        float: left;\n}\n.header div.sub-list ul.sub-nav li a {\n          padding: 0 12px;\n          border-radius: 10px;\n          font-size: 12px;\n}\n.header div.sub-list ul.sub-nav li a:hover, .header div.sub-list ul.sub-nav li a:focus, .header div.sub-list ul.sub-nav li a.active {\n            color: #F5CE03;\n            background: #666;\n}\n\n/* --------- end ------------ */\n/* ------- 主页内容 --------- */\n.wrap {\n  width: 100%;\n  min-width: 1100px;\n  margin: 0 auto;\n  background: #fafafa;\n}\n.wrap .wrap-in {\n    width: 1100px;\n    margin: 0 auto;\n    background: #FAFAF5;\n}\n\n/* ---------- end ------------*/\n/* --------- footer ---------*/\n.footer {\n  width: 100%;\n  min-width: 1100px;\n  background: #f9f9f9;\n  border-top: solid 2px #ccc;\n}\n\n/* ---------- end ------------*/\n", ""]);
 
 // exports
 
@@ -12135,6 +12148,125 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(28)
+
+var Component = __webpack_require__(9)(
+  /* script */
+  __webpack_require__(25),
+  /* template */
+  __webpack_require__(27),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\login.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] login.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-12293e36", Component.options)
+  } else {
+    hotAPI.reload("data-v-12293e36", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+
+
+module.exports = {
+	data: function () {
+		return {
+			greeting: 'Hello'
+		};
+	}
+};
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', [_vm._v(_vm._s(_vm.greeting) + " World!")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-12293e36", module.exports)
+  }
+}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(26);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(15)("3b16c7e2", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-12293e36\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-12293e36\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

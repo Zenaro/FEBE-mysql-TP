@@ -44,6 +44,10 @@
 	        </div>
 	    </div>
 	</div>
+	<router-view></router-view>
+	<div class="footer">
+		
+	</div>
   </div>
 </template>
 
@@ -257,4 +261,14 @@ $imgUrlPrefix: 'http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/sr
 		background: #FAFAF5;
 	}
 }
+/* ---------- end ------------*/
+
+/* --------- footer ---------*/
+.footer{
+	width: 100%;
+	min-width: 1100px;
+	background: #f9f9f9;
+	border-top: solid 2px #ccc;
+}
+/* ---------- end ------------*/
 </style>

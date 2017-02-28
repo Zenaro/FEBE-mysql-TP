@@ -6,6 +6,7 @@ import './style/base.scss';
 Vue.use(VueRouter);
 
 import Container from './component/container.vue';
+import Login from './component/login.vue';
 // import About from './component/about.vue';
 
 // const Foo = {
@@ -35,7 +36,11 @@ import Container from './component/container.vue';
 const router = new VueRouter({
 	routes: [{
 		path: '/',
-		component: Container
+		component: Container,
+		children: [{
+			path: 'login',
+			component: Login
+		}]
 	}]
 });
 

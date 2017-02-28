@@ -48,6 +48,7 @@
 </template>
 
 <script>
+
 module.exports = {
 	data: function() {
 		return {
@@ -58,6 +59,7 @@ module.exports = {
 </script>
 
 <style lang="sass">
+$imgUrlPrefix: 'http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/';
 .header {
 	width: 100%;
 	height: 105px;
@@ -67,7 +69,7 @@ module.exports = {
 		width: 1000px;
 		margin: 0 auto;
 		height: 70px;
-		h1 {
+		> h1 {
 			width: 180px;
 			height: 70px;
 			overflow: hidden;
@@ -84,6 +86,51 @@ module.exports = {
 			li {
 				padding: 0 1px;
 				float: left;
+			}
+		}
+		> ul.nav li {
+			line-height: 70px;
+			a {
+				padding: 0 14px;
+				display: block;
+				&:hover, &.active {
+					background: #DBFAF0;
+				}
+			}
+		}
+		> .top-tool{
+			height: 70px;
+			float: right;
+			padding: 0 35px;
+			.top-search {
+				width: 235px;
+				height: 30px;
+				float: left;
+				background: #fcfcfc;
+				margin: 20px;
+				border: solid 1px #ccc;
+				border-radius: 20px;
+				position: relative;
+				input {
+					width: 185px;
+					height: 30px;
+					border: 0;
+					float: left;
+					background: #fcfcfc;
+					line-height: 30px;
+				    outline: none;
+				    margin-left: 15px;
+				}
+				i {
+					width: 30px;
+					height: 20px;
+					display: block;
+					float: right;
+					cursor: pointer;
+					margin: 5px 5px 0 0;
+					background: url($imgUrlPrefix + 'sprite.png');
+					background-position: -440px -10px;
+				}
 			}
 		}
 	}

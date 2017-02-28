@@ -82,8 +82,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./index.scss", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./index.scss");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./base.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./base.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -93,7 +93,44 @@ if(false) {
 }
 
 /***/ }),
-/* 1 */,
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(14)
+
+var Component = __webpack_require__(9)(
+  /* script */
+  __webpack_require__(4),
+  /* template */
+  __webpack_require__(10),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\container.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] container.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-18daecce", Component.options)
+  } else {
+    hotAPI.reload("data-v-18daecce", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10955,7 +10992,68 @@ return Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ }),
-/* 4 */,
+/* 4 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+	data: function () {
+		return {
+			greeting: 'Hello'
+		};
+	}
+};
+
+/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10964,7 +11062,7 @@ exports = module.exports = __webpack_require__(6)();
 
 
 // module
-exports.push([module.i, "body {\n  background: #aaa; }\n  body h1 {\n    color: Green; }\n", ""]);
+exports.push([module.i, "html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, p {\n  margin: 0;\n  padding: 0; }\n\na {\n  color: #333;\n  color: inherit;\n  text-decoration: none; }\n\nul {\n  list-style: none; }\n", ""]);
 
 // exports
 
@@ -11517,7 +11615,129 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 10 */,
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "container"
+  }, [_c('div', {
+    staticClass: "header"
+  }, [_c('div', {
+    staticClass: "header-center"
+  }, [_c('h1', [_c('router-link', {
+    attrs: {
+      "to": "/"
+    }
+  }, [_vm._v("ZMedia音乐")])], 1), _vm._v(" "), _c('ul', {
+    staticClass: "nav"
+  }, [_c('li', [_c('router-link', {
+    staticClass: "active",
+    attrs: {
+      "to": "/"
+    }
+  }, [_vm._v("发现音乐")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": "/login"
+    }
+  }, [_vm._v("我的音乐")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
+    attrs: {
+      "to": "/login"
+    }
+  }, [_vm._v("热门歌曲")])], 1), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _vm._m(2)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('a', {
+    attrs: {
+      "href": "../../"
+    }
+  }, [_vm._v("客户端下载")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "top-tool"
+  }, [_c('div', {
+    staticClass: "top-search"
+  }, [_c('i', {
+    staticClass: "icn-search"
+  }), _vm._v(" "), _c('input', {
+    attrs: {
+      "type": "text",
+      "placeholder": "单曲/歌手/专辑/歌单/用户"
+    }
+  }), _vm._v(" "), _c('ul', {
+    staticClass: "result"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "top-user"
+  }, [_c('a', {
+    staticClass: "user-login",
+    attrs: {
+      "href": "#/login"
+    }
+  }, [_vm._v("登录")]), _vm._v(" "), _c('a', {
+    staticClass: "user-login",
+    attrs: {
+      "href": "#/reg"
+    }
+  }, [_vm._v("注册")]), _vm._v(" "), _c('div', {
+    staticClass: "user-memb"
+  }, [_c('h4', [_vm._v("用户")]), _vm._v(" "), _c('ul', {
+    staticClass: "slide-down"
+  }, [_c('li', [_c('a', {
+    attrs: {
+      "href": "#/my"
+    }
+  }, [_vm._v("我的主页")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "#/my"
+    }
+  }, [_vm._v("资料设置")])]), _vm._v(" "), _c('li', [_c('a', {
+    staticClass: "logout",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("退出")])])])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "sub-list"
+  }, [_c('div', {
+    staticClass: "center"
+  }, [_c('ul', {
+    staticClass: "sub-nav"
+  }, [_c('li', [_c('a', {
+    staticClass: "active",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("推荐")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("排行榜")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("歌单")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("主播电台")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("歌手")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("新碟上架")])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-18daecce", module.exports)
+  }
+}
+
+/***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
@@ -11554,11 +11774,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_index_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_base_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__component_container_vue__);
-
 
 
 
@@ -11608,8 +11827,46 @@ const app = new __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a({
 }).$mount('#app');
 
 /***/ }),
-/* 13 */,
-/* 14 */,
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)();
+// imports
+
+
+// module
+exports.push([module.i, "\n.header {\n  width: 100%;\n  height: 105px;\n  min-width: 1000px;\n  background: #F2FAF7;\n}\n.header .header-center {\n    width: 1000px;\n    margin: 0 auto;\n    height: 70px;\n}\n.header .header-center h1 {\n      width: 180px;\n      height: 70px;\n      overflow: hidden;\n      font-weight: bolder;\n      font-size: 24px;\n      color: #0F6C3E;\n      float: left;\n      line-height: 70px;\n}\n.header .header-center ul {\n      float: left;\n      text-align: center;\n      font-size: 16px;\n}\n.header .header-center ul li {\n        padding: 0 1px;\n        float: left;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(13);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(15)("21aa97ee", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-18daecce\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./container.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-18daecce\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/sass-loader/lib/loader.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./container.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11877,269 +12134,6 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(21)
-
-var Component = __webpack_require__(9)(
-  /* script */
-  __webpack_require__(18),
-  /* template */
-  __webpack_require__(19),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\container.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] container.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18daecce", Component.options)
-  } else {
-    hotAPI.reload("data-v-18daecce", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-module.exports = {
-	data: function () {
-		return {
-			greeting: 'Hello'
-		};
-	}
-};
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "header"
-  }, [_c('div', {
-    staticClass: "header-center center"
-  }, [_c('h1', [_c('router-link', {
-    attrs: {
-      "to": "/"
-    }
-  }, [_vm._v("ZMedia音乐")])], 1), _vm._v(" "), _c('ul', {
-    staticClass: "nav"
-  }, [_c('li', [_c('router-link', {
-    staticClass: "active",
-    attrs: {
-      "to": "/"
-    }
-  }, [_vm._v("发现音乐")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
-    attrs: {
-      "to": "/login"
-    }
-  }, [_vm._v("我的音乐")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
-    attrs: {
-      "to": "/login"
-    }
-  }, [_vm._v("热门歌曲")])], 1), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _vm._m(2)])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('li', [_c('a', {
-    attrs: {
-      "href": "../../"
-    }
-  }, [_vm._v("客户端下载")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "top-tool"
-  }, [_c('div', {
-    staticClass: "top-search"
-  }, [_c('i', {
-    staticClass: "icn-search"
-  }), _vm._v(" "), _c('input', {
-    attrs: {
-      "type": "text",
-      "placeholder": "单曲/歌手/专辑/歌单/用户"
-    }
-  }), _vm._v(" "), _c('ul', {
-    staticClass: "result"
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "top-user"
-  }, [_c('a', {
-    staticClass: "user-login",
-    attrs: {
-      "href": "#/login"
-    }
-  }, [_vm._v("登录")]), _vm._v(" "), _c('a', {
-    staticClass: "user-login",
-    attrs: {
-      "href": "#/reg"
-    }
-  }, [_vm._v("注册")]), _vm._v(" "), _c('div', {
-    staticClass: "user-memb"
-  }, [_c('h4', [_vm._v("用户")]), _vm._v(" "), _c('ul', {
-    staticClass: "slide-down"
-  }, [_c('li', [_c('a', {
-    attrs: {
-      "href": "#/my"
-    }
-  }, [_vm._v("我的主页")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "#/my"
-    }
-  }, [_vm._v("资料设置")])]), _vm._v(" "), _c('li', [_c('a', {
-    staticClass: "logout",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("退出")])])])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "sub-list"
-  }, [_c('div', {
-    staticClass: "center"
-  }, [_c('ul', {
-    staticClass: "sub-nav"
-  }, [_c('li', [_c('a', {
-    staticClass: "active",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("推荐")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("排行榜")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("歌单")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("主播电台")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("歌手")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("新碟上架")])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-18daecce", module.exports)
-  }
-}
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)();
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(20);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(15)("3200a810", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-18daecce\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./container.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-18daecce\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./container.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 /******/ ]);

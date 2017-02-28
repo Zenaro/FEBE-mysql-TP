@@ -1,7 +1,7 @@
 <template>
   <div class="container">
   	<div class="header">
-	    <div class="header-center center">
+	    <div class="header-center">
 	        <h1>
 	            <router-link to="/">ZMedia音乐</router-link>
 	        </h1>
@@ -57,6 +57,35 @@ module.exports = {
 }
 </script>
 
-<style>
-	
+<style lang="sass">
+.header {
+	width: 100%;
+	height: 105px;
+	min-width: 1000px;
+	background: #F2FAF7;
+	.header-center {
+		width: 1000px;
+		margin: 0 auto;
+		height: 70px;
+		h1 {
+			width: 180px;
+			height: 70px;
+			overflow: hidden;
+			font-weight: bolder;
+			font-size: 24px;
+			color: #0F6C3E;
+			float: left;
+			line-height: 70px;
+		}
+		ul {
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			li {
+				padding: 0 1px;
+				float: left;
+			}
+		}
+	}
+}
 </style>

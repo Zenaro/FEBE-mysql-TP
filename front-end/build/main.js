@@ -12277,30 +12277,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a.use(__WEBPACK_IMPORTED_M
 
 // import About from './component/about.vue';
 
-// const Foo = {
-// 	template: '<div>foo</div>'
-// };
-// const Bar = {
-// 	template: '<div>bar</div>'
-// };
-// const User = {
-// 	template: '<div>User{{$route.params.id}}</div>'
-// };
-
-// 2. 定义路由
-// 每个路由应该映射一个组件。 其中"component" 可以是
-// 通过 Vue.extend() 创建的组件构造器，
-// 或者，只是一个组件配置对象。
-// const routes = [{
-// 	path: '/foo',
-// 	component: Foo
-// }, {
-// 	path: '/bar',
-// 	component: Bar
-// }];
-
-// 3. 创建 router 实例，然后传 `routes` 配置
-// 你还可以传别的配置参数, 不过先这么简单着吧。
+// 创建 router 实例，然后传 `routes` 配置
 const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router___default.a({
 	routes: [{
 		path: '/',
@@ -12315,7 +12292,7 @@ const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router___default.a({
 	}]
 });
 
-// 4. 创建和挂载根实例。
+// 创建和挂载根实例。
 // 记得要通过 router 配置参数注入路由，
 // 从而让整个应用都有路由功能
 const app = new __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a({
@@ -12364,19 +12341,123 @@ module.exports = Component.exports
 
 /***/ }),
 /* 25 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 //
 //
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
 	data: function () {
+		const Pic1 = __webpack_require__(32);
+		const Pic2 = __webpack_require__(33);
+		const Pic3 = __webpack_require__(34);
+		const Pic4 = __webpack_require__(35);
+		const Pic5 = __webpack_require__(36);
+		const Pic6 = __webpack_require__(38);
+		const Pic7 = __webpack_require__(39);
+		const Pic8 = __webpack_require__(40);
 		return {
-			greeting: 'Hello'
+			imgSlide: [Pic1, Pic2, Pic3, Pic4, Pic5]
 		};
 	}
 };
@@ -12390,7 +12471,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -12400,8 +12481,220 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', [_vm._v(_vm._s(_vm.greeting) + " index!")])
-},staticRenderFns: []}
+  return _c('div', {
+    staticClass: "wrap"
+  }, [_c('div', {
+    staticClass: "wrap-in"
+  }, [_c('div', {
+    staticClass: "cloumn main-top"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "slides"
+  }, [_c('ul', {
+    staticClass: "points"
+  }, _vm._l((_vm.imgSlide), function(item) {
+    return _c('li', [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      }
+    }, [_c('img', {
+      attrs: {
+        "src": item,
+        "alt": "图片"
+      }
+    })])])
+  })), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "btns"
+  }, [_c('a', {
+    staticClass: "btn-down",
+    attrs: {
+      "href": "http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip",
+      "download": "http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip",
+      "title": "客户端下载"
+    }
+  }, [_vm._v("客户端下载")]), _vm._v(" "), _c('a', {
+    staticClass: "btn-reg sm",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("注册帐号")]), _vm._v(" "), _c('a', {
+    staticClass: "tool-border"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "btn-browse sm",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("站台一览")]), _vm._v(" "), _c('a', {
+    staticClass: "btn-gift sm",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("等级礼包")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('ul', {
+    staticClass: "sub-tips"
+  }, [_c('li', {
+    staticClass: "active"
+  }, [_vm._v("●")]), _c('li', [_vm._v("●")]), _c('li', [_vm._v("●")]), _c('li', [_vm._v("●")]), _c('li', [_vm._v("●")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "aside"
+  }, [_c('ul', {
+    staticClass: "aside-tab"
+  }, [_c('li', [_c('a', {
+    staticClass: "active",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("最新")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("活动")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("公告")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("焦点")])]), _vm._v(" "), _c('li', {
+    staticClass: "tab-tool"
+  }, [_vm._v("+")])]), _vm._v(" "), _c('ul', {
+    staticClass: "aside-list"
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "column main-hot"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h3', [_vm._v("热门歌单"), _c('span', [_vm._v("PLAYLIST")])]), _vm._v(" "), _c('ul', {
+    staticClass: "hot-list",
+    attrs: {
+      "id": "hot-list"
+    }
+  }, [_c('li', [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('li', {
+    staticClass: "active"
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('li', [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })])])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "column main-rank"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h3', [_vm._v("排行榜"), _c('span', [_vm._v("RANKLIST")])]), _vm._v(" "), _c('div', {
+    staticClass: "rank"
+  }, [_c('dl', {
+    staticClass: "rank-blk"
+  }, [_c('dt', {
+    staticClass: "top"
+  }, [_c('a', {
+    staticClass: "dt-img",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dt-txt"
+  }, [_c('a', {
+    staticClass: "title",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("云音乐飙升榜")]), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-play",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-store",
+    attrs: {
+      "href": "javascript:;",
+      "data-type": "up"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "blk-border"
+  }), _vm._v(" "), _c('dl', {
+    staticClass: "rank-blk"
+  }, [_c('dt', {
+    staticClass: "top"
+  }, [_c('a', {
+    staticClass: "dt-img",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dt-txt"
+  }, [_c('a', {
+    staticClass: "title",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("云音乐新歌榜")]), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-play",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-store",
+    attrs: {
+      "href": "javascript:;",
+      "data-type": "new"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "blk-border"
+  }), _vm._v(" "), _c('dl', {
+    staticClass: "rank-blk"
+  }, [_c('dt', {
+    staticClass: "top"
+  }, [_c('a', {
+    staticClass: "dt-img",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dt-txt"
+  }, [_c('a', {
+    staticClass: "title",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("原创歌曲榜")]), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-play",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-store",
+    attrs: {
+      "href": "javascript:;",
+      "data-type": "create"
+    }
+  })])])])])])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -12435,6 +12728,58 @@ if(false) {
  // When the module is disposed, remove the <style> tags
  module.hot.dispose(function() { update(); });
 }
+
+/***/ }),
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "aa9648f5a66c0c2a18d15fe445f6c1f3.jpg";
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "d3dae8c2a9b94b37e10dc0debed0399a.jpg";
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "48a48a282ca2ab1907e2ddc290a0a59c.jpg";
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a6f277dbd0b7f1fdba4385500442976d.jpg";
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f239d1245879dee034cdb021ce64ae43.jpg";
+
+/***/ }),
+/* 37 */,
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a4ab3e15ba5bebc90581c0ccd1aa0dce.jpg";
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b3411a072fb7ea51ff8540ffc60bead1.jpg";
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "2eb2f2ee89d7be3d3fe5a1805392ab57.jpg";
 
 /***/ })
 /******/ ]);

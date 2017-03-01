@@ -4,6 +4,9 @@
 	"main": "./src/main.js",
 	"license": "MIT",
 	"author": "Zenaro",
+	"scripts": {
+		"start": "webpack --watch"
+	},
 	"dependencies": {
 		"autoprefixer-loader": "^3.2.0",
 		"babel": "^6.23.0",

@@ -6,10 +6,10 @@
 	            <router-link to="/">ZMedia音乐</router-link>
 	        </h1>
 	        <ul class="nav">
-	            <li><router-link to="/" class="active">发现音乐</a></li>
-	            <li><router-link to="/login">我的音乐</a></li>
-	            <li><router-link to="/login">热门歌曲</a></li>
-	            <li><a href="../../">客户端下载</a></li>
+	            <li><router-link to="/" class="active">发现音乐</router-link></li>
+	            <li><router-link to="/login">我的音乐</router-link></li>
+	            <li><router-link to="/login">热门歌曲</router-link></li>
+	            <li><a href="http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip" download="http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip">客户端下载</a></li>
 	        </ul>
 	        <div class="top-tool">
 	            <div class="top-search">
@@ -18,13 +18,13 @@
 	                <ul class="result"></ul>
 	            </div>
 	            <div class="top-user">
-	                <a href="#/login" class="user-login">登录</a>
-	                <a href="#/reg" class="user-login">注册</a>
+	                <router-link to="/login" class="user-login">登录</router-link>
+	                <router-link to="/reg" class="user-login">注册</router-link>
 	                <div class="user-memb">
 	                    <h4>用户</h4>
 	                    <ul class="slide-down">
-	                        <li><a href="#/my">我的主页</a></li>
-	                        <li><a href="#/my">资料设置</a></li>
+	                        <li><router-link to="/my">我的主页</router-link></li>
+	                        <li><router-link to="/my">资料设置</router-link></li>
 	                        <li><a href="javascript:;" class="logout">退出</a></li>
 	                    </ul>
 	                </div>
@@ -44,9 +44,27 @@
 	        </div>
 	    </div>
 	</div>
+
 	<router-view></router-view>
+
 	<div class="footer">
-		
+	    <div class="footer-center">
+	        <a class="recruit" href="javascript:;">
+	            <p>独立音乐人招募计划</p>
+	            <span>加入我们 即将与超过亿万乐迷互动</span>
+	        </a>
+	        <div class="copy">
+	            <ul class="copy-list">
+	                <li><a href="javascript:;">关于本站</a></li><li>-</li>
+	                <li><a href="javascript:;"> 客户服务</a></li><li>-</li>
+	                <li><a href="javascript:;"> 服务条款</a></li><li>-</li>
+	                <li><a href="javascript:;"> 网站导航</a></li>
+	                <span>Lyric旗下版权所有©1997-2015 </span>
+	            </ul>
+	            <p>网络文化经营许可证：粤网文[2014]0332-034号</p>
+	        </div>
+	        <a class="feedback" href="javascript:;"><i></i>意见反馈</a>
+	    </div>
 	</div>
   </div>
 </template>
@@ -269,6 +287,68 @@ $imgUrlPrefix: 'http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/sr
 	min-width: 1100px;
 	background: #f9f9f9;
 	border-top: solid 2px #ccc;
+	.footer-center{
+		width: 1040px; /*1100-30*2*/
+		height: 60px;
+		margin: 0 auto;
+		padding: 30px;
+		color: #999;
+		font-size: 13px;
+		a {
+			color: #999;
+			font-size: 14px;
+			&:hover {
+				text-decoration: underline;
+			}
+			&.recruit {
+				width: 260px;
+				height: 50px;
+				display: block;
+				float: left;
+				padding-left: 53px;
+				background: url($imgUrlPrefix + 'sprite.png') no-repeat;
+				background-position: -400px -78px;
+				&:hover {
+					text-decoration: none;
+				}
+				p {
+					color: #666;
+					line-height: 27px;
+				}
+			}
+		}
+		.copy {
+			width: 460px;
+			height: 70px;
+			float: left;
+			ul {
+				width: 100%;
+				overflow: hidden;
+				padding: 5px 0;
+				li {
+					float: left;
+				}
+				span {
+					padding-left: 8px;
+				}
+			}
+		}
+		.feedback {
+			display: block;
+			float: right;
+			height: 25px;
+			line-height: 22px;
+			padding: 5px 0;
+			i {
+				display: block;
+				float: left;
+				width: 22px;
+				height: 22px;
+				background: url($imgUrlPrefix + 'iconplay.png') no-repeat;
+				background-position: 0 -37px;
+			}
+		}
+	}
 }
 /* ---------- end ------------*/
 </style>

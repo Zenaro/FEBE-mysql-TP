@@ -13,12 +13,12 @@
                 <ul class="points">
                     <li  v-for="item in imgSlide">
                     	<a href="javascript:;">
-                    		<img :src="item" alt="图片"/>
+                    		<img :src="item" alt="banner"/>
                     	</a>
                     </li>
                 </ul>
                 <ul class="sub-tips">
-                    <li class="active">●</li><li>●</li><li>●</li><li>●</li><li>●</li>
+                    <li v-for="item in imgSlide" class="active">●</li>
                 </ul>
             </div>
             <div class="aside">
@@ -27,7 +27,7 @@
                     <li><a href="javascript:;">活动</a></li>
                     <li><a href="javascript:;">公告</a></li>
                     <li><a href="javascript:;">焦点</a></li>
-                    <li class="tab-tool">+</li>
+                    <i class="tab-tool">+</i>
                 </ul>
                 <ul class="aside-list"></ul>
             </div>
@@ -37,14 +37,8 @@
             <div class="section">
                 <h3>热门歌单<span>PLAYLIST</span></h3>
                 <ul class="hot-list" id="hot-list">
-                    <li>
-                    	<img alt="">
-                    </li>
-                    <li class="active">
-                    	<img alt=""/>
-                    </li>
-                    <li>
-                    	<img alt="">
+                    <li v-for="item in imgHover">
+                    	<img :src="item" alt="">
                     </li>
                 </ul>
             </div>
@@ -103,20 +97,21 @@
 <script>
 module.exports = {
 	data: function() {
-		const Pic1 = require('../image/poster/player-1.jpg');
-		const Pic2 = require('../image/poster/player-2.jpg');
-		const Pic3 = require('../image/poster/player-3.jpg');
-		const Pic4 = require('../image/poster/player-4.jpg');
-		const Pic5 = require('../image/poster/player-5.jpg');
-		const Pic6 = require('../image/poster/player-6.jpg');
-		const Pic7 = require('../image/poster/player-7.jpg');
-		const Pic8 = require('../image/poster/player-8.jpg');
+		let imgSlide = [],
+			imgHover = [],
+			imgUrlPrefix = 'http://om6mucew9.bkt.clouddn.com/';
+		for (let i = 1; i <= 5; i++) {
+			imgSlide.push(imgUrlPrefix + 'player-'+i+'.jpg');
+		}
+		for (let i = 6; i <= 8; i++) {
+			imgHover.push(imgUrlPrefix + 'player-'+i+'.jpg');
+		}
 		return {
-			imgSlide: [Pic1, Pic2, Pic3, Pic4, Pic5] 
+			"imgSlide": imgSlide,
+			"imgHover": imgHover
 		}
 	}
 }
-
 </script>
 
 <style>

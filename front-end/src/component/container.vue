@@ -81,7 +81,7 @@ module.exports = {
 </script>
 
 <style lang="sass">
-$imgUrlPrefix: 'http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/';
+$imgUrlPrefix: 'http://om6mucew9.bkt.clouddn.com/'; // 七牛云静态资源服务器
 /* ---- header ------- */
 .header {
 	width: 100%;

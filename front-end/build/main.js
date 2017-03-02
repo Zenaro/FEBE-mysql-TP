@@ -455,9 +455,9 @@ var Component = __webpack_require__(1)(
   /* cssModules */
   null
 )
-Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\container.vue"
+Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\index.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] container.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -466,9 +466,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-18daecce", Component.options)
+    hotAPI.createRecord("data-v-48819b1f", Component.options)
   } else {
-    hotAPI.reload("data-v-18daecce", Component.options)
+    hotAPI.reload("data-v-48819b1f", Component.options)
   }
 })()}
 
@@ -11449,12 +11449,46 @@ return Vue$3;
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 module.exports = {
 	data: function () {
+		let imgSlide = [],
+		    imgHover = [],
+		    imgUrlPrefix = 'http://om6mucew9.bkt.clouddn.com/';
+		for (let i = 1; i <= 5; i++) {
+			imgSlide.push(imgUrlPrefix + 'player-' + i + '.jpg');
+		}
+		for (let i = 6; i <= 8; i++) {
+			imgHover.push(imgUrlPrefix + 'player-' + i + '.jpg');
+		}
 		return {
-			greeting: 'Hello'
+			"imgSlide": imgSlide,
+			"imgHover": imgHover
 		};
 	}
 };
@@ -11487,7 +11521,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, p, form, input {\n  margin: 0;\n  padding: 0; }\n\na {\n  color: #333;\n  color: inherit;\n  text-decoration: none; }\n\nul {\n  list-style: none; }\n", ""]);
+exports.push([module.i, "html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, p, form, input {\n  margin: 0;\n  padding: 0; }\n\na {\n  color: #333;\n  color: inherit;\n  text-decoration: none; }\n\nul {\n  list-style: none; }\n\ni, em {\n  font-style: normal; }\n", ""]);
 
 // exports
 
@@ -11515,7 +11549,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/* ---- header ------- */\n.header {\n  width: 100%;\n  height: 105px;\n  min-width: 1000px;\n  background: #F2FAF7;\n}\n.header .center {\n    width: 1000px;\n    margin: 0 auto;\n}\n.header div.header-banner {\n    height: 70px;\n}\n.header div.header-banner > h1 {\n      width: 180px;\n      height: 70px;\n      overflow: hidden;\n      font-weight: bolder;\n      font-size: 24px;\n      color: #0F6C3E;\n      float: left;\n      line-height: 70px;\n}\n.header div.header-banner ul {\n      float: left;\n      text-align: center;\n      font-size: 16px;\n}\n.header div.header-banner ul li {\n        padding: 0 1px;\n        float: left;\n}\n.header div.header-banner > ul.nav li {\n      line-height: 70px;\n}\n.header div.header-banner > ul.nav li a {\n        padding: 0 14px;\n        display: block;\n}\n.header div.header-banner > ul.nav li a:hover, .header div.header-banner > ul.nav li a.active {\n          background: #DBFAF0;\n}\n.header div.header-banner > .top-tool {\n      height: 70px;\n      float: right;\n      padding: 0 35px;\n}\n.header div.header-banner > .top-tool .top-search {\n        width: 235px;\n        height: 30px;\n        float: left;\n        background: #fcfcfc;\n        margin: 20px;\n        border: solid 1px #ccc;\n        border-radius: 20px;\n        position: relative;\n}\n.header div.header-banner > .top-tool .top-search input {\n          width: 185px;\n          height: 30px;\n          border: 0;\n          float: left;\n          background: #fcfcfc;\n          line-height: 30px;\n          outline: none;\n          margin-left: 15px;\n}\n.header div.header-banner > .top-tool .top-search i {\n          width: 30px;\n          height: 20px;\n          display: block;\n          float: right;\n          cursor: pointer;\n          margin: 5px 5px 0 0;\n          background: url(\"http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/sprite.png\");\n          background-position: -440px -10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result {\n          width: 250px;\n          background: #fff;\n          position: absolute;\n          padding: 5px 0;\n          border: solid 1px #ccc;\n          border-radius: 7px;\n          display: none;\n          top: 35px;\n          left: 0;\n}\n.header div.header-banner > .top-tool .top-search ul.result li {\n            width: 99%;\n            height: 30px;\n            line-height: 30px;\n            text-indent: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a {\n              overflow: hidden;\n              display: block;\n              font-size: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a.active, .header div.header-banner > .top-tool .top-search ul.result li a:hover {\n                background: #f1f1f1;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col {\n                float: left;\n                white-space: nowrap;\n                overflow: hidden;\n                text-overflow: ellipsis;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-master {\n                  max-width: 30%;\n                  color: #0C73C2;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.col-str {\n                  max-width: 10%;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-name {\n                  max-width: 60%;\n}\n.header div.header-banner > .top-tool .top-user {\n        float: left;\n        color: #666;\n        cursor: pointer;\n        background: inherit;\n        line-height: 70px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb {\n          height: auto;\n          line-height: 70px;\n          display: none;\n          float: left;\n          position: relative;\n}\n.header div.header-banner > .top-tool .top-user .user-memb h4 {\n            font-weight: normal;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down {\n            width: 90px;\n            padding: 5px 0;\n            text-align: center;\n            background: #fafafa;\n            border: solid 1px #aaa;\n            border-radius: 4px;\n            position: absolute;\n            top: 50px;\n            left: -30px;\n            display: none;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li {\n              width: 88px;\n              height: 25px;\n              line-height: 25px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a {\n                display: block;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a:hover {\n                  background: #F2FAF7;\n}\n.header div.sub-list {\n    width: 100%;\n    height: 35px;\n    overflow: hidden;\n    background: #777;\n}\n.header div.sub-list ul.sub-nav {\n      margin-left: 190px;\n}\n.header div.sub-list ul.sub-nav li {\n        padding: 0 15px;\n        color: #03DEDB;\n        line-height: 35px;\n        float: left;\n}\n.header div.sub-list ul.sub-nav li a {\n          padding: 0 12px;\n          border-radius: 10px;\n          font-size: 12px;\n}\n.header div.sub-list ul.sub-nav li a:hover, .header div.sub-list ul.sub-nav li a:focus, .header div.sub-list ul.sub-nav li a.active {\n            color: #F5CE03;\n            background: #666;\n}\n\n/* --------- end ------------ */\n/* ------- 主页内容 --------- */\n.wrap {\n  width: 100%;\n  min-width: 1100px;\n  margin: 0 auto;\n  background: #fafafa;\n}\n.wrap .wrap-in {\n    width: 1100px;\n    margin: 0 auto;\n    background: #FAFAF5;\n}\n\n/* ---------- end ------------*/\n/* --------- footer ---------*/\n.footer {\n  width: 100%;\n  min-width: 1100px;\n  background: #f9f9f9;\n  border-top: solid 2px #ccc;\n}\n.footer .footer-center {\n    width: 1040px;\n    /*1100-30*2*/\n    height: 60px;\n    margin: 0 auto;\n    padding: 30px;\n    color: #999;\n    font-size: 13px;\n}\n.footer .footer-center a {\n      color: #999;\n      font-size: 14px;\n}\n.footer .footer-center a:hover {\n        text-decoration: underline;\n}\n.footer .footer-center a.recruit {\n        width: 260px;\n        height: 50px;\n        display: block;\n        float: left;\n        padding-left: 53px;\n        background: url(\"http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/sprite.png\") no-repeat;\n        background-position: -400px -78px;\n}\n.footer .footer-center a.recruit:hover {\n          text-decoration: none;\n}\n.footer .footer-center a.recruit p {\n          color: #666;\n          line-height: 27px;\n}\n.footer .footer-center .copy {\n      width: 460px;\n      height: 70px;\n      float: left;\n}\n.footer .footer-center .copy ul {\n        width: 100%;\n        overflow: hidden;\n        padding: 5px 0;\n}\n.footer .footer-center .copy ul li {\n          float: left;\n}\n.footer .footer-center .copy ul span {\n          padding-left: 8px;\n}\n.footer .footer-center .feedback {\n      display: block;\n      float: right;\n      height: 25px;\n      line-height: 22px;\n      padding: 5px 0;\n}\n.footer .footer-center .feedback i {\n        display: block;\n        float: left;\n        width: 22px;\n        height: 22px;\n        background: url(\"http://localhost/NewWorld/sql-CloudMusic/FEBE-mysql/front-end/src/image/sprite/iconplay.png\") no-repeat;\n        background-position: 0 -37px;\n}\n\n/* ---------- end ------------*/\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -11979,6 +12013,527 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "wrap"
+  }, [_c('div', {
+    staticClass: "wrap-in"
+  }, [_c('div', {
+    staticClass: "cloumn main-top"
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
+    staticClass: "slides"
+  }, [_c('ul', {
+    staticClass: "points"
+  }, _vm._l((_vm.imgSlide), function(item) {
+    return _c('li', [_c('a', {
+      attrs: {
+        "href": "javascript:;"
+      }
+    }, [_c('img', {
+      attrs: {
+        "src": item,
+        "alt": "banner"
+      }
+    })])])
+  })), _vm._v(" "), _c('ul', {
+    staticClass: "sub-tips"
+  }, _vm._l((_vm.imgSlide), function(item) {
+    return _c('li', {
+      staticClass: "active"
+    }, [_vm._v("●")])
+  }))]), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _c('div', {
+    staticClass: "column main-hot"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_vm._m(2), _vm._v(" "), _c('ul', {
+    staticClass: "hot-list",
+    attrs: {
+      "id": "hot-list"
+    }
+  }, _vm._l((_vm.imgHover), function(item) {
+    return _c('li', [_c('img', {
+      attrs: {
+        "src": item,
+        "alt": ""
+      }
+    })])
+  }))])]), _vm._v(" "), _vm._m(3)])])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "btns"
+  }, [_c('a', {
+    staticClass: "btn-down",
+    attrs: {
+      "href": "http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip",
+      "download": "http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip",
+      "title": "客户端下载"
+    }
+  }, [_vm._v("客户端下载")]), _vm._v(" "), _c('a', {
+    staticClass: "btn-reg sm",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("注册帐号")]), _vm._v(" "), _c('a', {
+    staticClass: "tool-border"
+  }), _vm._v(" "), _c('a', {
+    staticClass: "btn-browse sm",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("站台一览")]), _vm._v(" "), _c('a', {
+    staticClass: "btn-gift sm",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("等级礼包")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "aside"
+  }, [_c('ul', {
+    staticClass: "aside-tab"
+  }, [_c('li', [_c('a', {
+    staticClass: "active",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("最新")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("活动")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("公告")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("焦点")])]), _vm._v(" "), _c('i', {
+    staticClass: "tab-tool"
+  }, [_vm._v("+")])]), _vm._v(" "), _c('ul', {
+    staticClass: "aside-list"
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h3', [_vm._v("热门歌单"), _c('span', [_vm._v("PLAYLIST")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "column main-rank"
+  }, [_c('div', {
+    staticClass: "section"
+  }, [_c('h3', [_vm._v("排行榜"), _c('span', [_vm._v("RANKLIST")])]), _vm._v(" "), _c('div', {
+    staticClass: "rank"
+  }, [_c('dl', {
+    staticClass: "rank-blk"
+  }, [_c('dt', {
+    staticClass: "top"
+  }, [_c('a', {
+    staticClass: "dt-img",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dt-txt"
+  }, [_c('a', {
+    staticClass: "title",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("云音乐飙升榜")]), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-play",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-store",
+    attrs: {
+      "href": "javascript:;",
+      "data-type": "up"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "blk-border"
+  }), _vm._v(" "), _c('dl', {
+    staticClass: "rank-blk"
+  }, [_c('dt', {
+    staticClass: "top"
+  }, [_c('a', {
+    staticClass: "dt-img",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dt-txt"
+  }, [_c('a', {
+    staticClass: "title",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("云音乐新歌榜")]), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-play",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-store",
+    attrs: {
+      "href": "javascript:;",
+      "data-type": "new"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "blk-border"
+  }), _vm._v(" "), _c('dl', {
+    staticClass: "rank-blk"
+  }, [_c('dt', {
+    staticClass: "top"
+  }, [_c('a', {
+    staticClass: "dt-img",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "dt-txt"
+  }, [_c('a', {
+    staticClass: "title",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }, [_vm._v("原创歌曲榜")]), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-play",
+    attrs: {
+      "href": "javascript:;"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "icon icon-store",
+    attrs: {
+      "href": "javascript:;",
+      "data-type": "create"
+    }
+  })])])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-48819b1f", module.exports)
+  }
+}
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(11);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("3b16c7e2", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-12293e36\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-12293e36\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(12);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("06ebb448", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-48819b1f\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-48819b1f\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports) {
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+module.exports = function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_base_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__component_container_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_index_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__component_index_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_login_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_login_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__component_login_vue__);
+
+
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router___default.a);
+
+
+
+
+// import About from './component/about.vue';
+
+// 创建 router 实例，然后传 `routes` 配置
+const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router___default.a({
+	routes: [{
+		path: '/',
+		component: __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default.a,
+		children: [{
+			path: '',
+			component: __WEBPACK_IMPORTED_MODULE_4__component_index_vue___default.a
+		}, {
+			path: 'login',
+			component: __WEBPACK_IMPORTED_MODULE_5__component_login_vue___default.a
+		}]
+	}]
+});
+
+// 创建和挂载根实例。
+// 记得要通过 router 配置参数注入路由，
+// 从而让整个应用都有路由功能
+const app = new __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a({
+	router
+}).$mount('#app');
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(26)
+
+var Component = __webpack_require__(1)(
+  /* script */
+  __webpack_require__(23),
+  /* template */
+  __webpack_require__(25),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\container.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] container.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-18daecce", Component.options)
+  } else {
+    hotAPI.reload("data-v-18daecce", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+module.exports = {
+	data: function () {
+		return {
+			greeting: 'Hello'
+		};
+	}
+};
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+// imports
+
+
+// module
+exports.push([module.i, "\n@charset \"UTF-8\";\n/* ---- header ------- */\n.header {\n  width: 100%;\n  height: 105px;\n  min-width: 1000px;\n  background: #F2FAF7;\n}\n.header .center {\n    width: 1000px;\n    margin: 0 auto;\n}\n.header div.header-banner {\n    height: 70px;\n}\n.header div.header-banner > h1 {\n      width: 180px;\n      height: 70px;\n      overflow: hidden;\n      font-weight: bolder;\n      font-size: 24px;\n      color: #0F6C3E;\n      float: left;\n      line-height: 70px;\n}\n.header div.header-banner ul {\n      float: left;\n      text-align: center;\n      font-size: 16px;\n}\n.header div.header-banner ul li {\n        padding: 0 1px;\n        float: left;\n}\n.header div.header-banner > ul.nav li {\n      line-height: 70px;\n}\n.header div.header-banner > ul.nav li a {\n        padding: 0 14px;\n        display: block;\n}\n.header div.header-banner > ul.nav li a:hover, .header div.header-banner > ul.nav li a.active {\n          background: #DBFAF0;\n}\n.header div.header-banner > .top-tool {\n      height: 70px;\n      float: right;\n      padding: 0 35px;\n}\n.header div.header-banner > .top-tool .top-search {\n        width: 235px;\n        height: 30px;\n        float: left;\n        background: #fcfcfc;\n        margin: 20px;\n        border: solid 1px #ccc;\n        border-radius: 20px;\n        position: relative;\n}\n.header div.header-banner > .top-tool .top-search input {\n          width: 185px;\n          height: 30px;\n          border: 0;\n          float: left;\n          background: #fcfcfc;\n          line-height: 30px;\n          outline: none;\n          margin-left: 15px;\n}\n.header div.header-banner > .top-tool .top-search i {\n          width: 30px;\n          height: 20px;\n          display: block;\n          float: right;\n          cursor: pointer;\n          margin: 5px 5px 0 0;\n          background: url(\"http://om6mucew9.bkt.clouddn.com/sprite.png\");\n          background-position: -440px -10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result {\n          width: 250px;\n          background: #fff;\n          position: absolute;\n          padding: 5px 0;\n          border: solid 1px #ccc;\n          border-radius: 7px;\n          display: none;\n          top: 35px;\n          left: 0;\n}\n.header div.header-banner > .top-tool .top-search ul.result li {\n            width: 99%;\n            height: 30px;\n            line-height: 30px;\n            text-indent: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a {\n              overflow: hidden;\n              display: block;\n              font-size: 10px;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a.active, .header div.header-banner > .top-tool .top-search ul.result li a:hover {\n                background: #f1f1f1;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col {\n                float: left;\n                white-space: nowrap;\n                overflow: hidden;\n                text-overflow: ellipsis;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-master {\n                  max-width: 30%;\n                  color: #0C73C2;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.col-str {\n                  max-width: 10%;\n}\n.header div.header-banner > .top-tool .top-search ul.result li a .col.result-name {\n                  max-width: 60%;\n}\n.header div.header-banner > .top-tool .top-user {\n        float: left;\n        color: #666;\n        cursor: pointer;\n        background: inherit;\n        line-height: 70px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb {\n          height: auto;\n          line-height: 70px;\n          display: none;\n          float: left;\n          position: relative;\n}\n.header div.header-banner > .top-tool .top-user .user-memb h4 {\n            font-weight: normal;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down {\n            width: 90px;\n            padding: 5px 0;\n            text-align: center;\n            background: #fafafa;\n            border: solid 1px #aaa;\n            border-radius: 4px;\n            position: absolute;\n            top: 50px;\n            left: -30px;\n            display: none;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li {\n              width: 88px;\n              height: 25px;\n              line-height: 25px;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a {\n                display: block;\n}\n.header div.header-banner > .top-tool .top-user .user-memb ul.slide-down li a:hover {\n                  background: #F2FAF7;\n}\n.header div.sub-list {\n    width: 100%;\n    height: 35px;\n    overflow: hidden;\n    background: #777;\n}\n.header div.sub-list ul.sub-nav {\n      margin-left: 190px;\n}\n.header div.sub-list ul.sub-nav li {\n        padding: 0 15px;\n        color: #03DEDB;\n        line-height: 35px;\n        float: left;\n}\n.header div.sub-list ul.sub-nav li a {\n          padding: 0 12px;\n          border-radius: 10px;\n          font-size: 12px;\n}\n.header div.sub-list ul.sub-nav li a:hover, .header div.sub-list ul.sub-nav li a:focus, .header div.sub-list ul.sub-nav li a.active {\n            color: #F5CE03;\n            background: #666;\n}\n\n/* --------- end ------------ */\n/* ------- 主页内容 --------- */\n.wrap {\n  width: 100%;\n  min-width: 1100px;\n  margin: 0 auto;\n  background: #fafafa;\n}\n.wrap .wrap-in {\n    width: 1100px;\n    margin: 0 auto;\n    background: #FAFAF5;\n}\n\n/* ---------- end ------------*/\n/* --------- footer ---------*/\n.footer {\n  width: 100%;\n  min-width: 1100px;\n  background: #f9f9f9;\n  border-top: solid 2px #ccc;\n}\n.footer .footer-center {\n    width: 1040px;\n    /*1100-30*2*/\n    height: 60px;\n    margin: 0 auto;\n    padding: 30px;\n    color: #999;\n    font-size: 13px;\n}\n.footer .footer-center a {\n      color: #999;\n      font-size: 14px;\n}\n.footer .footer-center a:hover {\n        text-decoration: underline;\n}\n.footer .footer-center a.recruit {\n        width: 260px;\n        height: 50px;\n        display: block;\n        float: left;\n        padding-left: 53px;\n        background: url(\"http://om6mucew9.bkt.clouddn.com/sprite.png\") no-repeat;\n        background-position: -400px -78px;\n}\n.footer .footer-center a.recruit:hover {\n          text-decoration: none;\n}\n.footer .footer-center a.recruit p {\n          color: #666;\n          line-height: 27px;\n}\n.footer .footer-center .copy {\n      width: 460px;\n      height: 70px;\n      float: left;\n}\n.footer .footer-center .copy ul {\n        width: 100%;\n        overflow: hidden;\n        padding: 5px 0;\n}\n.footer .footer-center .copy ul li {\n          float: left;\n}\n.footer .footer-center .copy ul span {\n          padding-left: 8px;\n}\n.footer .footer-center .feedback {\n      display: block;\n      float: right;\n      height: 25px;\n      line-height: 22px;\n      padding: 5px 0;\n}\n.footer .footer-center .feedback i {\n        display: block;\n        float: left;\n        width: 22px;\n        height: 22px;\n        background: url(\"http://om6mucew9.bkt.clouddn.com/iconplay.png\") no-repeat;\n        background-position: 0 -37px;\n}\n\n/* ---------- end ------------*/\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "container"
   }, [_c('div', {
     staticClass: "header"
@@ -12136,39 +12691,13 @@ if (false) {
 }
 
 /***/ }),
-/* 17 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(11);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("3b16c7e2", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-12293e36\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-12293e36\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(24);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -12186,600 +12715,6 @@ if(false) {
  // When the module is disposed, remove the <style> tags
  module.hot.dispose(function() { update(); });
 }
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-module.exports = function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
-
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 21 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_router__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_base_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_base_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__component_container_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_index_vue__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__component_index_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_login_vue__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_login_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__component_login_vue__);
-
-
-
-
-
-__WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router___default.a);
-
-
-
-
-// import About from './component/about.vue';
-
-// 创建 router 实例，然后传 `routes` 配置
-const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router___default.a({
-	routes: [{
-		path: '/',
-		component: __WEBPACK_IMPORTED_MODULE_3__component_container_vue___default.a,
-		children: [{
-			path: '',
-			component: __WEBPACK_IMPORTED_MODULE_4__component_index_vue___default.a
-		}, {
-			path: 'login',
-			component: __WEBPACK_IMPORTED_MODULE_5__component_login_vue___default.a
-		}]
-	}]
-});
-
-// 创建和挂载根实例。
-// 记得要通过 router 配置参数注入路由，
-// 从而让整个应用都有路由功能
-const app = new __WEBPACK_IMPORTED_MODULE_0_vue_dist_vue_js___default.a({
-	router
-}).$mount('#app');
-
-/***/ }),
-/* 22 */,
-/* 23 */,
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(28)
-
-var Component = __webpack_require__(1)(
-  /* script */
-  __webpack_require__(25),
-  /* template */
-  __webpack_require__(27),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "F:\\xamp\\htdocs\\NewWorld\\sql-CloudMusic\\FEBE-mysql\\front-end\\src\\component\\index.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-48819b1f", Component.options)
-  } else {
-    hotAPI.reload("data-v-48819b1f", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-module.exports = {
-	data: function () {
-		const Pic1 = __webpack_require__(32);
-		const Pic2 = __webpack_require__(33);
-		const Pic3 = __webpack_require__(34);
-		const Pic4 = __webpack_require__(35);
-		const Pic5 = __webpack_require__(36);
-		const Pic6 = __webpack_require__(38);
-		const Pic7 = __webpack_require__(39);
-		const Pic8 = __webpack_require__(40);
-		return {
-			imgSlide: [Pic1, Pic2, Pic3, Pic4, Pic5]
-		};
-	}
-};
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "wrap"
-  }, [_c('div', {
-    staticClass: "wrap-in"
-  }, [_c('div', {
-    staticClass: "cloumn main-top"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "slides"
-  }, [_c('ul', {
-    staticClass: "points"
-  }, _vm._l((_vm.imgSlide), function(item) {
-    return _c('li', [_c('a', {
-      attrs: {
-        "href": "javascript:;"
-      }
-    }, [_c('img', {
-      attrs: {
-        "src": item,
-        "alt": "图片"
-      }
-    })])])
-  })), _vm._v(" "), _vm._m(1)]), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4)])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "btns"
-  }, [_c('a', {
-    staticClass: "btn-down",
-    attrs: {
-      "href": "http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip",
-      "download": "http://7xstax.com1.z0.glb.clouddn.com/Music-Effect.zip",
-      "title": "客户端下载"
-    }
-  }, [_vm._v("客户端下载")]), _vm._v(" "), _c('a', {
-    staticClass: "btn-reg sm",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("注册帐号")]), _vm._v(" "), _c('a', {
-    staticClass: "tool-border"
-  }), _vm._v(" "), _c('a', {
-    staticClass: "btn-browse sm",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("站台一览")]), _vm._v(" "), _c('a', {
-    staticClass: "btn-gift sm",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("等级礼包")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('ul', {
-    staticClass: "sub-tips"
-  }, [_c('li', {
-    staticClass: "active"
-  }, [_vm._v("●")]), _c('li', [_vm._v("●")]), _c('li', [_vm._v("●")]), _c('li', [_vm._v("●")]), _c('li', [_vm._v("●")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "aside"
-  }, [_c('ul', {
-    staticClass: "aside-tab"
-  }, [_c('li', [_c('a', {
-    staticClass: "active",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("最新")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("活动")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("公告")])]), _vm._v(" "), _c('li', [_c('a', {
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("焦点")])]), _vm._v(" "), _c('li', {
-    staticClass: "tab-tool"
-  }, [_vm._v("+")])]), _vm._v(" "), _c('ul', {
-    staticClass: "aside-list"
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "column main-hot"
-  }, [_c('div', {
-    staticClass: "section"
-  }, [_c('h3', [_vm._v("热门歌单"), _c('span', [_vm._v("PLAYLIST")])]), _vm._v(" "), _c('ul', {
-    staticClass: "hot-list",
-    attrs: {
-      "id": "hot-list"
-    }
-  }, [_c('li', [_c('img', {
-    attrs: {
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('li', {
-    staticClass: "active"
-  }, [_c('img', {
-    attrs: {
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('li', [_c('img', {
-    attrs: {
-      "alt": ""
-    }
-  })])])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "column main-rank"
-  }, [_c('div', {
-    staticClass: "section"
-  }, [_c('h3', [_vm._v("排行榜"), _c('span', [_vm._v("RANKLIST")])]), _vm._v(" "), _c('div', {
-    staticClass: "rank"
-  }, [_c('dl', {
-    staticClass: "rank-blk"
-  }, [_c('dt', {
-    staticClass: "top"
-  }, [_c('a', {
-    staticClass: "dt-img",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_c('img', {
-    attrs: {
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dt-txt"
-  }, [_c('a', {
-    staticClass: "title",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("云音乐飙升榜")]), _vm._v(" "), _c('a', {
-    staticClass: "icon icon-play",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "icon icon-store",
-    attrs: {
-      "href": "javascript:;",
-      "data-type": "up"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "blk-border"
-  }), _vm._v(" "), _c('dl', {
-    staticClass: "rank-blk"
-  }, [_c('dt', {
-    staticClass: "top"
-  }, [_c('a', {
-    staticClass: "dt-img",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_c('img', {
-    attrs: {
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dt-txt"
-  }, [_c('a', {
-    staticClass: "title",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("云音乐新歌榜")]), _vm._v(" "), _c('a', {
-    staticClass: "icon icon-play",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "icon icon-store",
-    attrs: {
-      "href": "javascript:;",
-      "data-type": "new"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "blk-border"
-  }), _vm._v(" "), _c('dl', {
-    staticClass: "rank-blk"
-  }, [_c('dt', {
-    staticClass: "top"
-  }, [_c('a', {
-    staticClass: "dt-img",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_c('img', {
-    attrs: {
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "dt-txt"
-  }, [_c('a', {
-    staticClass: "title",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }, [_vm._v("原创歌曲榜")]), _vm._v(" "), _c('a', {
-    staticClass: "icon icon-play",
-    attrs: {
-      "href": "javascript:;"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "icon icon-store",
-    attrs: {
-      "href": "javascript:;",
-      "data-type": "create"
-    }
-  })])])])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-48819b1f", module.exports)
-  }
-}
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(26);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("06ebb448", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-48819b1f\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?{\"id\":\"data-v-48819b1f\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "aa9648f5a66c0c2a18d15fe445f6c1f3.jpg";
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "d3dae8c2a9b94b37e10dc0debed0399a.jpg";
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "48a48a282ca2ab1907e2ddc290a0a59c.jpg";
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "a6f277dbd0b7f1fdba4385500442976d.jpg";
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "f239d1245879dee034cdb021ce64ae43.jpg";
-
-/***/ }),
-/* 37 */,
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "a4ab3e15ba5bebc90581c0ccd1aa0dce.jpg";
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "b3411a072fb7ea51ff8540ffc60bead1.jpg";
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "2eb2f2ee89d7be3d3fe5a1805392ab57.jpg";
 
 /***/ })
 /******/ ]);

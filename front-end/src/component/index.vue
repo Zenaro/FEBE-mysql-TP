@@ -48,42 +48,16 @@
             <div class="section">
                 <h3>排行榜<span>RANKLIST</span></h3>
                 <div class="rank">
-                    <dl class="rank-blk">
+                    <dl class="rank-blk" v-for="item in rank">
                         <dt class="top">
                             <a href="javascript:;" class="dt-img">
-                            	<img alt="">
+                            	<img :src="item.logo" alt="">
                             </a>
                             <div class="dt-txt">
-                                <a href="javascript:;" class="title">云音乐飙升榜</a>
+                                <a href="javascript:;" class="title" v-text="item.title"></a>
                                 <a href="javascript:;" class="icon icon-play"></a>
-                                <a href="javascript:;" class="icon icon-store" data-type="up"></a>
+                                <a href="javascript:;" class="icon icon-store" :data-type="item.dataType"></a>
                             </div>
-                        </dt>
-                    </dl>
-                    <div class="blk-border"></div>
-                    <dl class="rank-blk">
-                        <dt class="top">
-                            <a href="javascript:;" class="dt-img">
-                            	<img alt="">
-                            </a>
-	                        <div class="dt-txt">
-	                            <a href="javascript:;" class="title">云音乐新歌榜</a>
-	                            <a href="javascript:;" class="icon icon-play"></a>
-	                            <a href="javascript:;" class="icon icon-store" data-type="new"></a>
-	                        </div>
-                        </dt>
-                    </dl>
-                    <div class="blk-border"></div>
-                    <dl class="rank-blk">
-                        <dt class="top">
-                            <a href="javascript:;" class="dt-img">
-                            	<img alt="">
-                            </a>
-	                        <div class="dt-txt">
-	                            <a href="javascript:;" class="title">原创歌曲榜</a>
-	                            <a href="javascript:;" class="icon icon-play"></a>
-	                            <a href="javascript:;" class="icon icon-store" data-type="create"></a>
-	                        </div>
                         </dt>
                     </dl>
                 </div>
@@ -99,21 +73,400 @@ module.exports = {
 	data: function() {
 		let imgSlide = [],
 			imgHover = [],
-			imgUrlPrefix = 'http://om6mucew9.bkt.clouddn.com/';
+			imgUrlPrefix = 'http://om6mucew9.bkt.clouddn.com/',
+			ajaxUrlPrefix = '../back-end/index.php/Home/Index/';
+
 		for (let i = 1; i <= 5; i++) {
 			imgSlide.push(imgUrlPrefix + 'player-'+i+'.jpg');
 		}
 		for (let i = 6; i <= 8; i++) {
 			imgHover.push(imgUrlPrefix + 'player-'+i+'.jpg');
 		}
+
+		this.$http.get(ajaxUrlPrefix + 'index').then(response => {
+			// console.log(response);
+		}, response => {
+			// console.log(error)
+		});
+		this.slider();
 		return {
 			"imgSlide": imgSlide,
-			"imgHover": imgHover
+			"imgHover": imgHover,
+			"rank": [{
+				"title": '云音乐飙升榜',
+				"logo": imgUrlPrefix + 'musicUp.jpg',
+				"dataType": 'up'
+			}, {
+				"title": '云音乐新歌榜',
+				"logo": imgUrlPrefix + 'musicNew.jpg',
+				"dataType": 'new'
+			}, {
+				"title": '原创歌曲榜',
+				"logo": imgUrlPrefix + 'musicCreate.jpg',
+				"dataType": 'create'
+			}]
+		}
+	},
+	methods: {
+		slider: function() {
+			console.log(this.imgSlide)
 		}
 	}
+	
 }
 </script>
 
-<style>
-	
+<style lang="sass">
+$imgUrlPrefix: 'http://om6mucew9.bkt.clouddn.com/';
+.wrap {
+	padding-top: 380px;
+	background: #fafafa url($imgUrlPrefix + 'wrap.jpg') no-repeat center top;
+	background-size: 1400px;
+	.column {
+		width: 100%;
+		margin: auto;
+		margin-top: 20px;
+		clear: both;
+	}
+	.main-top {
+		height: 265px;
+		.btns {
+			width: 19%;
+		    height: 100%;
+		    float: left;
+		    a {
+				color: #ddd;
+				text-align: center;
+			    display: block;
+			    &.btn-down{
+			    	color: #fff;
+					height: 150px;
+				    line-height: 150px;
+				    font-size: 20px;
+				    background: #31C27C;
+				}
+				&.btn-reg, &.btn-browse {
+				    width: 50%;
+				    float: left;
+				    font-size: 13px;
+				    text-indent: 10px;
+				    line-height: 55px;
+				    background: #0D673B;
+				    &:hover {
+						background: #467662;
+					}
+				}
+				&.btn-gift {
+					clear: both;
+					font-size: 16px;
+					line-height: 60px;
+				    text-indent: 10px;
+					background: #0A4B2C;
+					&:hover {
+						background: #0AA55A;
+					}
+				}
+			}
+		}
+		.slides {
+			width: 53%;
+			height: 100%;
+			float: left;
+			position: relative;
+			overflow: hidden;
+			ul.points {
+				position: absolute;
+				li {
+					width: 583px;
+					float: left;
+				}
+			}
+			ul.sub-tips{
+			    width: 100%;
+				position: absolute;
+			    color: #ddd;
+			    padding: 5px 0;
+			    text-align: center;
+			    bottom: 0;
+			    right: 0;
+			    li {
+					cursor: pointer;
+				    width: 25px;
+				    float: left;
+				    &:first-child {
+						margin-left: 230px;
+					}
+					&:hover, &.active {
+						color: #0F3C8D;
+					}
+				}
+			}
+			ul.sub-bg {
+				background: linear-gradient(rgba(0,0,0,0),rgba(30,30,30,0.8));
+			}
+		}
+		.aside {
+			width: 26%;		/*总宽度28% */
+			padding: 0 1%;  /*26+1+1 = 28% */
+			height: 100%;
+			float: left;
+			overflow: hidden;
+			background: #fff;
+			ul.aside-tab {
+				width: 100%;
+			    height: 40px;
+			    font-size: 18px;
+			    line-height: 40px;
+			    border-bottom: 1px solid #999;
+			    li {
+					width: 18%;
+					margin: 0 1.5%;
+					float: left;
+					text-align: center;
+					a {
+						color: #333;
+					    display: block;
+					    &:hover, &.active {
+							color: blue;
+							border-bottom: solid 2px blue;
+						}
+					}
+					.tab-tool {
+						width: 6%;
+						font-size: 20px;
+					    float: right;
+					    cursor: pointer;
+					}
+				}
+			}
+			ul.aside-list {
+				clear: both;
+				padding: 5% 0;
+				font-size: 14px;
+				li {
+					line-height: 28px;
+					a {
+						width: 80%;
+						color: #333;
+						display: block;
+						float: left;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						&:hover, &.active{
+							color: red;
+						}
+					}
+					span {
+						display: block;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+	.section {
+		width: 100%;
+		height: 100%;
+		float: left;
+		background: #fff;
+		overflow: hidden;
+		position: relative;
+		h3 {
+			font-size: 18px;
+			margin: 0 2%;
+			padding: 1% 4%;
+			border-bottom: solid 1px #ccc;
+			span {
+				color: #ddd;
+				font-size: 10px;
+				padding: 2%;
+			}
+		}
+	}
+	.main-hot {
+		height: 300px;
+		ul {
+			width: 2400px;
+			overflow: hidden;
+			position: absolute;
+			top: 80px;
+			background: #000;
+			li {
+				width: 367px;
+				height: 100%;
+				float: left;
+				background: #000;
+				position: relative;
+				img {
+					transition: opacity 0.5s;
+					opacity: 0.4;
+					cursor: pointer;
+				}
+				&:hover img {
+					opacity: 0.8;
+				}
+				&:hover:after {
+					width: 36px;
+					height: 36px;
+					background: green;
+					content: "";
+					position: absolute;
+					opacity: 1;
+					bottom: 20px;
+					left: 20px;
+					background: url($imgUrlPrefix + 'playbar.png');
+					background-position: 0 -204px;
+				}
+			}
+		}
+	}
+	.main-rank {
+		width: 100%;
+		height: 600px;
+		.section {
+			width: 100%;
+			.rank {
+				width: 97%;
+				margin: 15px;
+				height: 493px;
+				background: #f4f4f4;
+				border: solid 1px #ccc;
+				display: table;
+				dl {
+					display: table-cell;
+					width: 33.3%;
+					&:nth-child(2) {
+						position: relative;
+						width: 33.4%;
+						&:before, &:after {
+							content: "";
+							position: absolute;
+							width: 1px;
+							height: 100%;
+							background: #ddd;
+							top: 0;
+						}
+						&:before {
+							left: 0;
+						}
+						&:after {
+							right: 0;
+						}
+					}
+					a {
+						color: #333;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					dt {
+						padding: 20px;
+						height: 80px;
+						.dt-img {
+							width: 80px;
+							height: 80px;
+							overflow: hidden;
+							display: block;
+							float: left;
+						}
+						.dt-txt {
+							width: 50%;
+							height: 80px;
+							float: left;
+							margin-left: 10px;
+							font-size: 16px;
+							a.title {
+								width: 100%;
+								line-height: 30px;
+								font-weight: bold;
+								display: block;
+								float: left;
+							}
+							a.icon {
+								width: 22px;
+								height: 22px;
+								float: left;
+								display: block;
+								margin: 5px;
+								background: url($imgUrlPrefix + 'index.png') no-repeat;
+							}
+							a.icon-play {
+								background-position: -267px -205px;
+								&:hover {
+									background-position: -267px -235px;
+								}
+							}
+							a.icon-store {
+								background-position: -300px -206px;
+								&:hover {
+									background-position: -300px -236px;
+								}
+							}
+						}
+					} 
+					dd {
+						width: 100%;
+						height: 34px;
+						float: left;
+						overflow: hidden;
+						line-height: 32px;
+						span {
+							color: red;
+							font-size: 16px;
+							display: block;
+							width: 20px;
+							text-align: center;
+							float: left;
+							text-align: center;
+							padding: 0 10px 0 20px;
+						}
+						a.title {
+							display: block;
+							max-width: 110px;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							overflow: hidden;
+							float: left;
+						}
+						.dd-oper {
+							width: 90px;
+							float: right;
+							display: none;
+							a {
+								width: 17px;
+								height: 17px;
+								margin: 8px 5px;
+								display: block;
+								float: left;
+								&.icon-play {
+									background: url($imgUrlPrefix+'index.png');
+									background-position: -267px -268px;
+									&:hover {
+										background-position: -267px -288px;
+									}
+								}
+								&.icon-add {
+									width: 15px;
+									background: url($imgUrlPrefix+'iconplay.png');
+									background-position: 0 -698px;
+									&:hover {
+										background-position: -22px -698px;
+									}
+								}
+								&.icon-store {
+									background: url($imgUrlPrefix+'index.png');
+									background-position: -297px -268px;
+									&:hover {
+										background-position: -297px -288px;
+									}
+								}
+							}
+						}
+					}
+				} 
+			}
+		}
+	}
+}
 </style>

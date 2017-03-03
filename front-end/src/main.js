@@ -1,14 +1,15 @@
 import Vue from 'vue/dist/vue.js';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 import './style/base.scss';
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 import Container from './component/container.vue';
 import Index from './component/index.vue';
 import Login from './component/login.vue';
-// import About from './component/about.vue';
 
 // 创建 router 实例，然后传 `routes` 配置
 const router = new VueRouter({

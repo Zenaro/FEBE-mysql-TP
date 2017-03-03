@@ -10,15 +10,19 @@
                 <a href="javascript:;" class="btn-gift sm">等级礼包</a>
             </div>
             <div class="slides">
-                <ul class="points">
-                    <li  v-for="item in imgSlide">
+                <ul class="points" :style="{left: -slideUtil.index*583+'px'}">
+                    <li v-for="item in slideUtil.imgSlide">
                     	<a href="javascript:;">
                     		<img :src="item" alt="banner"/>
                     	</a>
                     </li>
                 </ul>
                 <ul class="sub-tips">
-                    <li v-for="item in imgSlide" class="active">●</li>
+                    <li v-for="(item, index) in slideUtil.imgSlide" 
+                    	:class="[slideUtil.index == index ? 'active' : '']"
+                    	v-on:click="slider(index)">
+                    	●
+                    </li>
                 </ul>
             </div>
             <div class="aside">
@@ -74,7 +78,7 @@ module.exports = {
 		let imgSlide = [],
 			imgHover = [],
 			imgUrlPrefix = 'http://om6mucew9.bkt.clouddn.com/',
-			ajaxUrlPrefix = '../back-end/index.php/Home/Index/';
+			ajaxUrlPrefix = '../back-end/index.php/Home/';
 
 		for (let i = 1; i <= 5; i++) {
 			imgSlide.push(imgUrlPrefix + 'player-'+i+'.jpg');
@@ -83,15 +87,21 @@ module.exports = {
 			imgHover.push(imgUrlPrefix + 'player-'+i+'.jpg');
 		}
 
-		this.$http.get(ajaxUrlPrefix + 'index').then(response => {
-			// console.log(response);
-		}, response => {
+		this.$http.get(ajaxUrlPrefix + 'Index/getNews').then(res => {
+			this.$set('news', [1, 2]);
+			// console.log(res.body);
+		}, res => {
 			// console.log(error)
 		});
 		this.slider();
 		return {
-			"imgSlide": imgSlide,
+			"slideUtil": {
+				"imgSlide": imgSlide,
+				"cell": 583,
+				"index": 0
+			},
 			"imgHover": imgHover,
+			"news": [],
 			"rank": [{
 				"title": '云音乐飙升榜',
 				"logo": imgUrlPrefix + 'musicUp.jpg',
@@ -107,12 +117,31 @@ module.exports = {
 			}]
 		}
 	},
+	ready: function() {
+		console.log('test')
+	},
 	methods: {
-		slider: function() {
-			console.log(this.imgSlide)
+		slider: function(i, imgCount) { // 滑动banner图
+			let length = imgCount || 5;
+
+			this.timer && clearInterval(this.timer);
+			if (typeof i === 'number' && i >= 0 && i < length) {
+				this.slideUtil.index = i;
+				this.timer = setInterval(() => {
+					this.slideUtil.index < length - 1 ?
+						this.slideUtil.index += 1 :
+						this.slideUtil.index = 0;
+				}, 6000);
+
+			} else {
+				this.timer = setInterval(() => {
+					this.slideUtil.index < length - 1 ?
+						this.slideUtil.index += 1 :
+						this.slideUtil.index = 0;
+				}, 6000);
+			}
 		}
 	}
-	
 }
 </script>
 
@@ -175,7 +204,9 @@ $imgUrlPrefix: 'http://om6mucew9.bkt.clouddn.com/';
 			position: relative;
 			overflow: hidden;
 			ul.points {
+				width: 3000px;
 				position: absolute;
+				transition: left 0.5s;
 				li {
 					width: 583px;
 					float: left;

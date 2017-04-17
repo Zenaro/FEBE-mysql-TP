@@ -60,7 +60,7 @@ class MusicModel extends Model {
 			->limit(10)
 			->order('listeners')
 			->select();
-		return ['msg'=>'', 'result'=>$result];
+		return $result;
 	}
 
 	/*

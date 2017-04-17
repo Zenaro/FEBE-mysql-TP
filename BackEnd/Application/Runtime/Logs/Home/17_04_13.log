@@ -1,0 +1,380 @@
+[ 2017-04-13T18:10:16+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001812s ]
+SQL: SHOW COLUMNS FROM `app_news` [ RunTime:0.1841s ]
+SQL: SELECT * FROM `app_news` LIMIT 7   [ RunTime:0.0080s ]
+
+[ 2017-04-13T18:10:17+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001877s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.1847s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.1203s ]
+
+[ 2017-04-13T18:15:17+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/User/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `app_info` [ RunTime:0.0183s ]
+SQL: SELECT * FROM `app_user` WHERE `email` = ''  [ RunTime:0.0151s ]
+SQL: INSERT INTO `app_user` (`email`,`pwd`,`regDate`,`root`) VALUES ('','202cb962ac59075b964b07152d234b70','2017-04-13','0') [ RunTime:0.0123s ]
+SQL: INSERT INTO `app_info` (`user_id`,`name`,`image`) VALUES ('54','123','../public/image/poster/profile.jpg') [ RunTime:0.0005s ]
+
+[ 2017-04-13T18:15:18+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000968s ]
+SQL: SHOW COLUMNS FROM `app_news` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `app_news` LIMIT 7   [ RunTime:0.0006s ]
+
+[ 2017-04-13T18:15:18+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001173s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0053s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0044s ]
+
+[ 2017-04-13T18:15:18+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0063s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0055s ]
+
+[ 2017-04-13T18:15:18+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0337s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0041s ]
+
+[ 2017-04-13T18:15:18+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/User/getInfo?id=54
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001654s ]
+SQL: SHOW COLUMNS FROM `app_info` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `app_info` WHERE `user_id` = 54  [ RunTime:0.0004s ]
+
+[ 2017-04-13T18:15:46+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+SQL: SHOW COLUMNS FROM `app_news` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `app_news` LIMIT 7   [ RunTime:0.0006s ]
+
+[ 2017-04-13T18:15:46+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0041s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0040s ]
+
+[ 2017-04-13T18:15:46+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0044s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0044s ]
+
+[ 2017-04-13T18:15:46+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0040s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0050s ]
+
+[ 2017-04-13T18:25:01+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/User/reg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+SQL: SHOW COLUMNS FROM `app_user` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `app_info` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `app_user` WHERE `email` = '123456@q.c'  [ RunTime:0.0005s ]
+SQL: INSERT INTO `app_user` (`email`,`pwd`,`regDate`,`root`) VALUES ('123456@q.c','e10adc3949ba59abbe56e057f20f883e','2017-04-13','0') [ RunTime:0.0005s ]
+SQL: INSERT INTO `app_info` (`user_id`,`name`,`image`) VALUES ('55','123456','../public/image/poster/profile.jpg') [ RunTime:0.0002s ]
+
+[ 2017-04-13T18:25:01+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `app_news` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `app_news` LIMIT 7   [ RunTime:0.0006s ]
+
+[ 2017-04-13T18:25:01+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0048s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0044s ]
+
+[ 2017-04-13T18:25:01+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0042s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0068s ]
+
+[ 2017-04-13T18:25:01+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004003s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0044s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0039s ]
+
+[ 2017-04-13T18:25:01+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/User/getInfo?id=55
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001898s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001963s ]
+SQL: SHOW COLUMNS FROM `app_info` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `app_info` WHERE `user_id` = 55  [ RunTime:0.0005s ]
+
+[ 2017-04-13T21:33:25+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Index/getNews
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003641s ]
+SQL: SHOW COLUMNS FROM `app_news` [ RunTime:0.1747s ]
+SQL: SELECT * FROM `app_news` LIMIT 7   [ RunTime:0.0016s ]
+
+[ 2017-04-13T21:33:26+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003641s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.1749s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.2527s ]
+
+[ 2017-04-13T21:33:26+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getList?data=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003640s ]
+NOTIC: [8] Undefined variable: GET F:\xamp\htdocs\NewWorld\sql-CloudMusic\FEBE-mysql-old\BackEnd\Application\Home\Controller\MusicController.class.php 第 22 行.
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.1746s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.2529s ]
+
+[ 2017-04-13T21:33:49+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0188s ]
+SQL: SELECT * FROM `app_music` WHERE `music_id` = 2  [ RunTime:0.0004s ]
+
+[ 2017-04-13T21:36:21+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+ERR: 无法加载控制器:GetAllList
+
+[ 2017-04-13T21:36:29+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000949s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000926s ]
+
+[ 2017-04-13T21:37:08+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000897s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0483s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006640s ]
+
+[ 2017-04-13T21:37:54+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0052s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0316s ]
+ERR: 1146:Table 'music.app_' doesn't exist
+ [ SQL语句 ] : SELECT music.music_id,music.name FROM `app_` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=2 ) ORDER BY listeners LIMIT 10  
+ERR: 1146:Table 'music.app_' doesn't exist
+ [ SQL语句 ] : SELECT music.music_id,music.name FROM `app_` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=2 ) ORDER BY listeners LIMIT 10  
+
+[ 2017-04-13T21:38:12+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0045s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0040s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=2 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0058s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=3 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0048s ]
+
+[ 2017-04-13T21:38:47+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0050s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0043s ]
+
+[ 2017-04-13T21:38:48+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0046s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0050s ]
+
+[ 2017-04-13T21:38:49+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0048s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0059s ]
+
+[ 2017-04-13T21:38:49+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0126s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0057s ]
+
+[ 2017-04-13T21:38:49+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0137s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0044s ]
+
+[ 2017-04-13T21:38:59+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0043s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=2 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0050s ]
+
+[ 2017-04-13T21:40:50+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0045s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0042s ]
+
+[ 2017-04-13T21:41:27+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0040s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0042s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=2 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0052s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=3 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0044s ]
+

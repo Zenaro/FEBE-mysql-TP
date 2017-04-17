@@ -28,8 +28,28 @@ class MusicController extends Controller {
 			$arr = $_GET['array'];
 			$data = new MusicModel();
 			$result = $data->getArray($arr);
+			$json = ['msg'=>'', 'result'=>$result];
 			$this->ajaxReturn($result, 'JSON');
 		}
+	}
+
+	public function getAllList() {
+
+		// 飙升榜歌单
+		$array = array();
+		$data = new MusicModel();
+		$result = $data->getList(1);
+		array_push($array, $result);
+
+		$data = new MusicModel();
+		$result = $data->getList(2);
+		array_push($array, $result);
+
+		$data = new MusicModel();
+		$result = $data->getList(3);
+		array_push($array, $result);
+
+		$this->ajaxReturn($array, 'JSON');
 	}
 
 	// 获取某首歌曲的评论

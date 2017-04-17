@@ -32,6 +32,10 @@ define(function(require, exports, module) {
 		}).on('submit', 'form[name=login]', function(e) {
 			e = e || event;
 			e.preventDefault();
+			if ($.trim($(self.user).val()).length < 2 || $.trim($(self.pwd).val()).length < 6) {
+				$(self.tips).html('邮箱与密码不匹配，请重新输入');
+				return;
+			}
 
 			if ($.trim($(self.user).val()) != '' && $.trim($(self.pwd).val()) != '') {
 				$.ajax({
@@ -47,7 +51,7 @@ define(function(require, exports, module) {
 							window.location.href = './frame.html';
 
 						} else {
-							$(self.tips).html('帐号与密码不匹配，请重新输入');
+							$(self.tips).html('邮箱与密码不匹配，请重新输入');
 							$(self.submit).val('登录').removeAttr('disabled');
 						}
 					}
@@ -55,7 +59,7 @@ define(function(require, exports, module) {
 				});
 
 			} else {
-				$(self.tips).html('请输入帐号和密码');
+				$(self.tips).html('请输入邮箱和密码');
 			}
 		});
 	}

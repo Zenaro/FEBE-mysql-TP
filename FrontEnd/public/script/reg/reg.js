@@ -45,9 +45,19 @@ define(function(require, exports, module) {
 		}).on('submit', 'form[name=reg]', function(e) {
 			e = e || event;
 			e.preventDefault();
+			if ($.trim($(self.name).val()).length < 2 ||
+				$.trim($(self.pwd).val()).length < 6) {
+				$(self.tips).html('密码由字母，数字组成，不少于6位');
+				return;
+			}
+
+			if ($.trim($(self.pwd).val()) !== $.trim($(self.repwd).val())) {
+				$(self.tips).html('两次输入的密码不匹配');
+				return;
+			}
 
 			if (!!$.trim($(self.name).val()) &&
-				!!$.trim($(self.name).val()) &&
+				!!$.trim($(self.email).val()) &&
 				!!$.trim($(self.pwd).val()) &&
 				!!$.trim($(self.repwd).val())) {
 
@@ -74,7 +84,6 @@ define(function(require, exports, module) {
 
 			} else {
 				$(self.tips).html('表单未完成，请继续填写');
-
 			}
 
 		});

@@ -1,0 +1,14 @@
+[ 2017-04-14T08:49:37+08:00 ] ::1 /NewWorld/sql-CloudMusic/FEBE-mysql-old/BackEnd/index.php/Home/Music/getAllList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.023126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001441s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.9435s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=1 ) ORDER BY listeners LIMIT 10   [ RunTime:0.1364s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0033s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=2 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `app_music` [ RunTime:0.0034s ]
+SQL: SELECT music.music_id,music.name FROM `app_music` `music`,`app_musicrclass` `mrc`,`app_class` `class` WHERE ( music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id=3 ) ORDER BY listeners LIMIT 10   [ RunTime:0.0039s ]
+

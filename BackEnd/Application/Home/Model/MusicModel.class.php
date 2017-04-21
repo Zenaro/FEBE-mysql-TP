@@ -3,18 +3,20 @@ namespace Home\Model;
 use Think\Model;
 
 class MusicModel extends Model {
-	protected $MusicClass;	// 歌曲 + 分类 + 关系表 -> 3表连接 
+	protected $MusicClassSinger;	// 歌曲 + 分类 + 关系表 -> 3表连接 
 	protected $MusicSinger; // 歌曲 + 歌手 + 关系表 -> 3表连接
 	protected $MusicColle;	// 歌曲 + 评论 + 用户信息表 -> 3表连接
 	public function __construct() {
-		$musicClass = new Model();
+		$MusicClassSinger = new Model();
 		$musicSinger = new Model();
 		$musicColle = new Model();
 
-		$this->MusicClass = $musicClass->table(array(
+		$this->MusicClassSinger = $MusicClassSinger->table(array(
 			C('DB_PREFIX').'music'=>'music',
 			C('DB_PREFIX').'musicrclass'=>'mrc',
-			C('DB_PREFIX').'class'=>'class'
+			C('DB_PREFIX').'class'=>'class',
+			C('DB_PREFIX').'singer'=>'singer',
+			C('DB_PREFIX').'singerrmusic'=>'srm'
 		));
 
 		$this->MusicSinger = $musicSinger->table(array(
@@ -38,13 +40,13 @@ class MusicModel extends Model {
 	public function getItem($music_id) {
 		$result = $this->MusicSinger
 			->where('music.music_id=mrs.music_id and mrs.singer_id=singer.singer_id and music.music_id='.$music_id)
-			->field('music.music_id, music.name, singer_name, music.src')
+			->field('music.music_id, music.name, singer.singer_name, music.src')
 			->select();
 		if (count($result) > 0) {
 			return ['msg'=>'succ', 'result'=>$result];
 
 		} else {
-			return ['msg'=>'empty', 'result'=>-1];
+			return ['msg'=>'empty', 'status'=>-1, 'result'=>[]];
 		}
 	}
 
@@ -54,9 +56,9 @@ class MusicModel extends Model {
 	* $class_id:歌曲类型的id
 	*/
 	public function getList($class_id) {
-		$result = $this->MusicClass
-			->where('music.music_id=mrc.music_id and mrc.class_id=class.class_id and class.class_id='.$class_id)
-			->field('music.music_id, music.name')
+		$result = $this->MusicClassSinger
+			->where('music.music_id=mrc.music_id and mrc.class_id=class.class_id and singer.singer_id=srm.singer_id and music.music_id=srm.music_id and class.class_id='.$class_id.'')
+			->field('music.music_id, music.name, singer.singer_name')
 			->limit(10)
 			->order('listeners')
 			->select();
